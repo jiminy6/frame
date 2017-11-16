@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<!-- 
+		name属性：指定要映射的类的全路径
+		table属性：指定与该类对应的表的名字,如果类名与表名一致，table可以省略不写
+	 -->
+	<class name="com.fun.domain.Customer" table="cst_customer">
+		<!-- id标签：映射主键属性
+					name属性：指定实体类主键属性
+					column属性：列的名字。如果属性名和列名一致，column属性可以不写
+		 -->
+		<id name="cust_id">
+			<!-- generator标签：指定主键的生成策略
+				取值native:根据底层数据库类型自行选择一种策略，如果底层数据是mysql,选择自增的方式来维护主键；
+				如果底层数据库是oracle,采用序列的方式来维护主键
+			 -->
+			<generator class="native"></generator>
+		</id>
+		<!-- property标签：映射普通属性的
+				name属性：指定普通属性名
+				column属性：指定列名。如果属性名和列名一致，column属性可以不写
+		 -->
+		<property name="cust_name"></property>
+		<property name="cust_source"></property>
+		<property name="cust_industry"></property>
+		<property name="cust_level"></property>
+		<property name="cust_address"></property>
+		<property name="cust_phone"></property>
+		
+	</class>
+</hibernate-mapping>
