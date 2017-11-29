@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>crm</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 核心监听器的配置 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+		<!-- 指定Spring核心配置文件的路径 -->
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<!--后期在配置文件优化的时候可以将在这个路径前加上具体的文件夹名,例如config/struts -->
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+	<filter>
+		<filter-name>OpenSessionInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate5.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>OpenSessionInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	<!-- 开启开发者模式 -->
+		<init-param>
+			<param-name>struts.devMode</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<!-- 一次请求内所有的文件的总和不能超过20M -->
+		<init-param>
+			<param-name>struts.multipart.maxSize</param-name>
+			<param-value>20971520</param-value>
+		</init-param>
+<!-- 			配置单个文件上传超过限制的提示信息文件所在地 -->
+		<init-param>
+			<param-name>struts.custom.i18n.resources</param-name>
+			<param-value>messageResource</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>
