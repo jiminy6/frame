@@ -1,0 +1,184 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cn.itcast.projects</groupId>
+  <artifactId>common_parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>common_parent</name>
+  <description>bos v2.0综合平台的公共父项目，用于统一依赖管理</description>
+  
+  	<!-- 自定义属性 -->
+ 	<properties>
+ 		<!-- 内置插件的默认属性的覆盖 -->
+ 		<!--prevent "[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!-->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!--Handle special characters in site-->
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!--set up Maven so it will compile with a target and source JVM of my choice-->
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.compilerVersion>1.7</maven.compiler.compilerVersion>
+ 		<!-- 统一版本维护 -->
+		<spring.version>4.2.9.RELEASE</spring.version>
+		<struts2.version>2.3.24</struts2.version>
+		<hibernate.version>5.0.1.Final</hibernate.version>
+		<slf4j.version>1.7.12</slf4j.version>
+		<c3p0.version>0.9.1.2</c3p0.version>
+		<oracle.version>11.2.0.1.0</oracle.version>
+		<servlet.version>2.5</servlet.version>
+		<jsp.version>2.1</jsp.version>
+		<junit.version>4.11</junit.version>
+		<springdatajpa.version>1.10.11.RELEASE</springdatajpa.version>
+		<poi.version>3.17</poi.version>
+	</properties>
+	<!-- 依赖管理 -->
+	<dependencies>
+		<!-- spring 框架 -->
+		<!-- spring context核心 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- Spring web 监听器 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- spring orm 整合orm框架 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- spring aspectj aop相关 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- Spring JPA -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${springdatajpa.version}</version>
+		</dependency>
+		<!-- spring test 测试 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- struts2 框架 -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>${struts2.version}</version>
+			<exclusions>
+					<exclusion>
+						<artifactId>javassist</artifactId>
+						<groupId>javassist</groupId>
+					</exclusion>
+				</exclusions>
+		</dependency>
+		<!-- spring和struts2的整合 -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>${struts2.version}</version>
+		</dependency>
+		<!-- struts2的注解插件 -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-convention-plugin</artifactId>
+			<version>${struts2.version}</version>
+		</dependency>
+		<!-- struts2的json插件 -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-json-plugin</artifactId>
+			<version>${struts2.version}</version>
+		</dependency>
+
+		<!-- hibernate 框架 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+  		<groupId>org.hibernate.javax.persistence</groupId>
+  		<artifactId>hibernate-jpa-2.1-api</artifactId>
+  		<version>1.0.0.Final</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-entitymanager</artifactId>
+  		<version>${hibernate.version}</version>
+  	</dependency>
+		<!-- 数据库连接池 -->
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${c3p0.version}</version>
+		</dependency>
+		<!-- oracle数据库驱动，需要手动安装  -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.oracle</groupId> -->
+<!-- 			<artifactId>ojdbc6</artifactId> -->
+<!-- 			<version>${oracle.version}</version> -->
+<!-- 			<scope>runtime</scope> -->
+<!-- 		</dependency> -->
+		<!-- mysql数据库驱动 -->
+		<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.6</version>
+				<scope>runtime</scope>
+			</dependency>
+		<!-- 日志框架  -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<!-- Servlet、JSP -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- 单元测试  -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+<!-- Apache POI -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.stuxuhai</groupId>
+			<artifactId>jpinyin</artifactId>
+			<version>1.1.8</version>
+		</dependency>
+	</dependencies>
+</project>
