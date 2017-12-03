@@ -1,11 +1,15 @@
 package cn.itcast.bos.web.action;
 
+import java.util.Collection;
+
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import javax.ws.rs.core.MediaType;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.cxf.jaxrs.client.WebClient;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +19,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Controller;
 
+import com.opensymphony.xwork2.ActionContext;
+
 import cn.itcast.bos.domain.base.FixedArea;
 import cn.itcast.bos.service.FixedAreaService;
+import cn.itcast.crm.domain.Customer;
 @Controller
 public class FixedAreaAction extends BaseAction<FixedArea> {
 
@@ -57,5 +64,41 @@ public class FixedAreaAction extends BaseAction<FixedArea> {
 	    System.out.println(pageResponse);
 		putDataToStack(pageResponse);
 		return JSON;
+	}
+	
+	@Action("fixedArea_listCustomerListByFixedAreaId")
+	public String findByfixedAreaId(){
+	    Collection<? extends Customer> collection = WebClient.create("http://localhost:8002/crm_management/services/customerservice/customers")
+		.path("/fixedaread")
+		.path("/"+model.getId())
+		.accept(MediaType.APPLICATION_JSON)
+		.getCollection(Customer.class);
+		ActionContext.getContext().getValueStack().push(collection);
+		return JSON;
+	}
+	@Action("fixedArea_listCustomerListNoFixedAreaId")
+	public String findnofixedArea(){
+		 Collection<? extends Customer> collection = WebClient.create("http://localhost:8002/crm_management/services/customerservice/customers")
+					.path("/nofixedaread")
+					.accept(MediaType.APPLICATION_JSON)
+					.getCollection(Customer.class);
+					ActionContext.getContext().getValueStack().push(collection);
+		return JSON;
+	}
+	private String ids;//用属性驱动获取页面上的customersIds
+	public void setIds(String ids) {
+		this.ids = ids;
+	}
+	@Action(value="fixedArea_updatearea",results={@Result(type="redirect",location="/pages/base/fixed_area.html")})
+	public String updatefixedarea(){
+		String customerIds=StringUtils.join(ids,",");
+		System.out.println(customerIds);
+		WebClient.create("http://localhost:8002/crm_management/services/customerservice/customers")
+		.path("/fixedaread")
+		.path("/"+model.getId())
+		.path("/"+customerIds)
+		.accept(MediaType.APPLICATION_JSON)
+		.put(null);
+		return SUCCESS;
 	}
 }

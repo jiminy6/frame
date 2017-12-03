@@ -36,16 +36,43 @@
 			
 			// 弹出关联客户窗口
 			function doAssociationCustomers(){
+				var rows=$("#grid").datagrid("getSelections");
+				if(rows.length!=1){
+					$.messager.alert("提示","必须选中一个","info");
+					return;
+				}
 				$("#customerWindow").window("open");
+				//填充之前将下拉列表置空
+				$("noassociationSelect").empty();
+				$("associationSelect").empty();
+				//用ajax获取所有未关联的客户
+				$.post("../../fixedArea_listCustomerListNoFixedAreaId.action",function(data){
+					$(data).each(function(){
+						//在未关联的select下拉框添加options
+// 				$("#noassociationSelect").append('<option value="'+this.id+'">+'this.username'+'+this.telephone+'</option>');
+						var option=$("<option value='"+this.id+"'>"+this.username+"("+this.telephone+")</option>");
+						$("#noassociationSelect").append(option);
+					})
+				})
+				//根据这个定区的id来获取所有关联的客户信息
+				$.post("../../fixedArea_listCustomerListByFixedAreaId.action",{"id":rows[0].id},function(data){
+					$(data).each(function(){
+// 				$("#associationSelect").append('<option value="'+this.id+'">+'this.username'+'+this.telephone+'</option>')//在未关联的select下拉框添加options
+						var option=$("<option value='"+this.id+"'>"+this.username+"("+this.telephone+")</option>");
+						$("#associationSelect").append(option);
+					})
+				})
 			}
 			
 			// 弹出关联快递员窗口
 			function doAssociationCourier(){
 				$("#courierWindow").window("open");
+				
 			}
 			// 弹出关联分区窗口
 			function doAssociationSubarea(){
 				$("#subAreaWindow").window("open");
+			
 			}
 			
 			//工具栏
@@ -178,46 +205,58 @@
 				});
 				
 				// 向右移动按钮 
-				$("#toRight").click(function(){
-					
-				});
+// 				$("#toRight").click(function(){
+// 					$("#associationSelect").append($("#noassociationSelect option:selected"));
+// 				});
 				
 				// 向左移动按钮
-				$("#toLeft").click(function(){
-					
-				});
+// 				$("#toLeft").click(function(){
+// 					$("#noassociationSelect").append($("#associationSelect option:selected"));
+// 				});
 				
+				
+			$("#toRight").click(function() {
+					$("#associationSelect").append($("#noassociationSelect option:selected"));
+				});
+
+				// 向左移动按钮
+				$("#toLeft").click(function() {
+					$("#noassociationSelect").append($("#associationSelect option:selected"));
+				});
+
 				// 为关联客户按钮，添加click事件
-				$("#associationBtn").click(function(){
-					
+				$("#associationBtn").click(function() {
+					var row = $("#grid").datagrid("getSelected");
+					$("#customerFixedAreaId").val(row.id);//将选中行的id赋值给隐藏域中
+					$("#associationSelect option").attr("selected", "selected");
+					$("#customerForm").submit();
 				});
-				
+
 				// 为关联快递员按钮，添加click事件
-				$("#associationCourierBtn").click(function(){
-					
+				$("#associationCourierBtn").click(function() {
 				});
 			});
-		
-			function doDblClickRow(){
+
+			function doDblClickRow() {
 				alert("双击表格数据...");
-				$('#association_subarea').datagrid( {
+				$('#association_subarea').datagrid({
 					fit : true,
 					border : true,
 					rownumbers : true,
 					striped : true,
 					url : "../../data/sub_area.json",
-					columns : [ [{
+					columns : [ [ {
 						field : 'id',
 						title : '分拣编号',
 						width : 120,
 						align : 'center'
-					},{
+					}, {
 						field : 'province',
 						title : '省',
 						width : 120,
 						align : 'center',
-						formatter : function(data,row ,index){
-							if(row.area!=null){
+						formatter : function(data, row, index) {
+							if (row.area != null) {
 								return row.area.province;
 							}
 							return "";
@@ -227,8 +266,8 @@
 						title : '市',
 						width : 120,
 						align : 'center',
-						formatter : function(data,row ,index){
-							if(row.area!=null){
+						formatter : function(data, row, index) {
+							if (row.area != null) {
 								return row.area.city;
 							}
 							return "";
@@ -238,8 +277,8 @@
 						title : '区',
 						width : 120,
 						align : 'center',
-						formatter : function(data,row ,index){
-							if(row.area!=null){
+						formatter : function(data, row, index) {
+							if (row.area != null) {
 								return row.area.district;
 							}
 							return "";
@@ -259,30 +298,30 @@
 						title : '终止号',
 						width : 100,
 						align : 'center'
-					} , {
+					}, {
 						field : 'single',
 						title : '单双号',
 						width : 100,
 						align : 'center'
-					} , {
+					}, {
 						field : 'assistKeyWords',
 						title : '辅助关键字',
 						width : 100,
 						align : 'center'
 					} ] ]
 				});
-				$('#association_customer').datagrid( {
+				$('#association_customer').datagrid({
 					fit : true,
 					border : true,
 					rownumbers : true,
 					striped : true,
 					url : "../../data/association_customer.json",
-					columns : [[{
+					columns : [ [ {
 						field : 'id',
 						title : '客户编号',
 						width : 120,
 						align : 'center'
-					},{
+					}, {
 						field : 'name',
 						title : '客户名称',
 						width : 120,
@@ -292,7 +331,7 @@
 						title : '所属单位',
 						width : 120,
 						align : 'center'
-					}]]
+					} ] ]
 				});
 				$('#association_courier').datagrid({
 					fit : true,
@@ -300,17 +339,17 @@
 					rownumbers : true,
 					striped : true,
 					url : "../../data/courier.json",
-					columns : [[{
+					columns : [ [ {
 						field : 'id',
 						title : '编号',
 						width : 120,
 						align : 'center'
-					},{
+					}, {
 						field : 'courierNum',
 						title : '快递员工号',
 						width : 120,
 						align : 'center'
-					},{
+					}, {
 						field : 'name',
 						title : '快递员姓名',
 						width : 120,
@@ -320,29 +359,29 @@
 						title : '收派标准',
 						width : 120,
 						align : 'center',
-						formatter : function(value,row,index){
-							if(row.standard != null){
+						formatter : function(value, row, index) {
+							if (row.standard != null) {
 								return row.standard.name;
 							}
-							return null ; 
+							return null;
 						}
 					}, {
 						field : 'taketime.name',
 						title : '收派时间',
 						width : 120,
 						align : 'center',
-						formatter : function(value,row,index){
-							if(row.taketime != null){
+						formatter : function(value, row, index) {
+							if (row.taketime != null) {
 								return row.taketime.name;
 							}
-							return null ; 
+							return null;
 						}
 					}, {
 						field : 'company',
 						title : '所属单位',
 						width : 120,
 						align : 'center'
-					}]]
+					} ] ]
 				});
 			}
 		</script>
@@ -453,7 +492,7 @@
 			collapsible="false" closed="true" minimizable="false" maximizable="false" style="top:20px;left:200px;width: 700px;height: 300px;">
 			<div style="overflow:auto;padding:5px;" border="false">
 				<form id="customerForm" 
-					action="../../fixedArea_associationCustomersToFixedArea.action" method="post">
+					action="../../fixedArea_updatearea.action" method="post">
 					<table class="table-edit" width="80%" align="center">
 						<tr class="title">
 							<td>未关联或取消关联</td>
@@ -472,7 +511,7 @@
 								<input type="button" value="《《" id="toLeft">
 							</td>
 							<td>
-								<select id="associationSelect" name="customerIds" multiple="multiple" size="10" style="width: 300px;"></select>
+								<select id="associationSelect" name="ids" multiple="multiple" size="10" style="width: 300px;"></select>
 							</td>
 						</tr>
 						<tr>
