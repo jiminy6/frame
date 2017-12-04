@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/angular-route.min.js"></script>
+</head>
+<body>
+<div ng-app="myapp" ></div>
+<div>===========我是头<br />
+    <a href="#/">首页</a>
+    <a href="#/computer">电脑分类</a>
+    <a href="#/money">财务管理</a>
+</div>
+<!--路由中的包含的页面的显示，只能有一个元素-->
+<div ng-view></div>
+
+<div>==========我是脚</div>
+
+</body>
+<script type="text/javascript">
+    angular.module("myapp",['ngRoute'])
+        .config(['$routeProvider',function ($routeProvider) {
+            $routeProvider
+                .when('/',{template:呃呃呃呃})
+                .when('/comptuter',{template:aaaaa})
+                .when('/money',{template:bbbb})
+                .otherwise({redirectTo:'/'})
+            ]
+        })
+</script>
+</html>

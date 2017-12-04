@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type=text/javascript src="../js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myapp" ng-controller="mycon">
+    <input ng-model="username">
+    <div>hello {{username}}</div>
+    <!--<input type="button" value="清空数据1" ng-click="username=''">-->
+    <input type="button" value="清空数据1" ng-click="clearMsg()">
+    <table border="1">
+        <tr>
+            <th>序号</th>
+            <th>商品编号</th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+        </tr>
+
+        <tr ng-repeat="product in products">
+            <td>{{$index+1}}</td>
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+        </tr>
+    </table>
+</div>
+</body>
+<script type=text/javascript>
+    var myapp=angular.module("myapp",[]);
+    myapp.controller("mycon",function ($scope) {
+//        $scope.username="xiix";
+        $scope.clearMsg=function(){
+            $scope.username="";
+        }
+        $scope.products=[{"id":1001,"name":"电视机","price":998},{"id":1002,"name":"战斗机","price":988898}];
+    })
+</script>
+</html>

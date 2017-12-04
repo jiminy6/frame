@@ -6,7 +6,7 @@ import java.util.List;
 public class EasyUiDataGridResult implements Serializable {
 
 	/**
-	 * 
+	 * 注意!要进行网络传输,一定要实现序列化接口.
 	 */
 	private static final long serialVersionUID = 1L;
 

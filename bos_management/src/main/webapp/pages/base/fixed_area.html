@@ -50,6 +50,7 @@
 					$(data).each(function(){
 						//在未关联的select下拉框添加options
 // 				$("#noassociationSelect").append('<option value="'+this.id+'">+'this.username'+'+this.telephone+'</option>');
+				$("#noassociationSelect").append("<option value='"+this.id+"'>+"this.username+"("+this.telephone+")"</option>");
 						var option=$("<option value='"+this.id+"'>"+this.username+"("+this.telephone+")</option>");
 						$("#noassociationSelect").append(option);
 					})
