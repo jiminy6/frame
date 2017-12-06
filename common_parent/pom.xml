@@ -30,9 +30,12 @@
 		<junit.version>4.11</junit.version>
 		<springdatajpa.version>1.10.11.RELEASE</springdatajpa.version>
 		<poi.version>3.17</poi.version>
+		<cxf.version>3.1.9</cxf.version>
 	</properties>
 	<!-- 依赖管理 -->
 	<dependencies>
+	
+	
 		<!-- spring 框架 -->
 		<!-- spring context核心 -->
 		<dependency>
@@ -179,6 +182,35 @@
 			<groupId>com.github.stuxuhai</groupId>
 			<artifactId>jpinyin</artifactId>
 			<version>1.1.8</version>
+		</dependency>
+			<!-- CXF RS -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<!-- CXF扩展提供者：提供了转换json的接口 -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-extension-providers</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<!-- CXF扩展提供者转换json需要默认的一个工具包 -->
+		<dependency>
+			<groupId>org.codehaus.jettison</groupId>
+			<artifactId>jettison</artifactId>
+			<version>1.3.8</version>
+		</dependency>
+		<!-- CXF的rs客户端 webclient-->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-client</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>cn.itcast.projects</groupId>
+			<artifactId>crm_domain</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
