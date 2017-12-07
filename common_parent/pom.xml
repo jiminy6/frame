@@ -31,11 +31,17 @@
 		<springdatajpa.version>1.10.11.RELEASE</springdatajpa.version>
 		<poi.version>3.17</poi.version>
 		<cxf.version>3.1.9</cxf.version>
+		<springdataredis.version>1.7.11.RELEASE</springdataredis.version>
+		<jedis.version>2.6.2</jedis.version>
+		<activemq.version>5.14.5</activemq.version>
 	</properties>
 	<!-- 依赖管理 -->
 	<dependencies>
-	
-	
+		<dependency>
+			<groupId>cn.itcast.projects</groupId>
+			<artifactId>crm_domain</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- spring 框架 -->
 		<!-- spring context核心 -->
 		<dependency>
@@ -207,10 +213,52 @@
 			<artifactId>cxf-rt-rs-client</artifactId>
 			<version>${cxf.version}</version>
 		</dependency>
+	
+			<dependency>
+		    <groupId>com.aliyun</groupId>
+		    <artifactId>aliyun-java-sdk-core</artifactId>
+		    <version>3.2.2</version>
+		</dependency>
+<!-- 	  	<dependency> -->
+<!-- 		    <groupId>com.aliyun</groupId> -->
+<!-- 		    <artifactId>aliyun-java-sdk-dysmsapi</artifactId> -->
+<!-- 		    <version>1.0.0</version> -->
+<!-- 		</dependency> -->
+		<!-- 邮件发送工具包：兼容版本 -->
 		<dependency>
-			<groupId>cn.itcast.projects</groupId>
-			<artifactId>crm_domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.4.7</version>
+		</dependency>
+		<!-- SpringDataRedis -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+			<version>${springdataredis.version}</version>
+		</dependency>
+		<!-- redis nosql 内存数据库 -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${jedis.version}</version>
+		</dependency>
+			<!-- spring整合MQ -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- 引入activeMQ的客户端jar -->
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-client</artifactId>
+			<version>${activemq.version}</version>
+		</dependency>
+		<!--activeMQ的spring整合包 -->
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-spring</artifactId>
+			<version>${activemq.version}</version>
 		</dependency>
 	</dependencies>
 </project>

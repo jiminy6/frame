@@ -6,6 +6,10 @@ import java.io.IOException;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import javax.jms.JMSException;
+import javax.jms.MapMessage;
+import javax.jms.Message;
+import javax.jms.Session;
 import javax.jws.WebParam.Mode;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.MediaType;
@@ -18,12 +22,16 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionContext;
 
+import cn.itcast.bos.web.action.comon.BaseAction;
 import cn.itcast.bos_fore.utils.*;
 import cn.itcast.crm.domain.Customer;
+import cn.itcast.utils.Constants;
 @Controller
 public class CustomerAction extends BaseAction<Customer>{
 
@@ -40,17 +48,26 @@ public class CustomerAction extends BaseAction<Customer>{
 	     */
 	//从模型驱动中获取telephone
 	//获取的checkcode存入session中
+	@Autowired
+	private JmsTemplate jmsTemplate;
 	@Action("customer_sendCheckcode")
-//	@Action("aaa")
 	public String sendCheckCode(){
-		String checkcode = RandomStringUtils.randomNumeric(4);
+		final String checkcode = RandomStringUtils.randomNumeric(4);//生成四个随机码
 		ServletActionContext.getRequest().getSession().setAttribute(model.getTelephone(), checkcode);
-		SmsUtils.sendSmsCheckCode(checkcode, model.getTelephone());
+//		SmsUtils.sendSmsCheckCode(checkcode, model.getTelephone());
+		jmsTemplate.send("bos.mq.checkcode",new MessageCreator() {
+			@Override
+			public Message createMessage(Session session) throws JMSException {
+				MapMessage mapMessage = session.createMapMessage();
+				mapMessage.setString("checkcode",checkcode);
+				mapMessage.setString("telephone",model.getTelephone());
+				return mapMessage;
+			}
+		});//将短信内容发送给mg服务器
 		return NONE;
 	}
 	//属性驱动获得checkcode
-	private String checkcode;
-
+	private  String  checkcode;
 	public void setCheckcode(String checkcode) {
 		this.checkcode = checkcode;
 	}
@@ -65,8 +82,8 @@ public class CustomerAction extends BaseAction<Customer>{
 	     * @time：2017年12月6日 上午12:32:33 value="customer_regist"
 	     */
 	@Action(value="customer_regist",results={
-			@Result(type="redirect",location="/signup-success.html"),
-			@Result( name=INPUT, type="redirect",location="/signup.html")
+			@Result(type=REDIRECT,location="/signup-success.html"),
+			@Result( name=INPUT, type=REDIRECT,location="/signup.html")
 			})
 	public String regist(){
 //		String sessionCode = (String) ActionContext.getContext().getSession().get(model.getTelephone());//session中的验证码
@@ -76,13 +93,13 @@ public class CustomerAction extends BaseAction<Customer>{
 			return INPUT;
 		}
 		String subject="bos商城信息";
-		String activeUrl="http://localhost:8080/bos_fore/customer_active.action";//激活的action
+		String activeUrl=Constants.BOS_FORE_URL+"/customer_active.action";//激活的action
 		String activeCode = RandomStringUtils.randomNumeric(32);//随机码
 		String urlAddress=activeUrl+"?activeCode="+activeCode+"&telephone="+model.getTelephone();
 		String content="<h3>请点击地址激活:<a href="+urlAddress+">"+urlAddress;
 		String to=model.getEmail();
 		MailUtils.sendMail(subject, content, to);
-		WebClient.create("http://localhost:8002/crm_management/services/customerservice/customers")
+		WebClient.create(Constants.CRM_MANAGEMENT_URL+"/services/customerservice/customers")
 				.type(MediaType.APPLICATION_JSON)
 				.post(model);
 		redisTemplate.opsForValue().set(model.getTelephone(),activeCode,24,TimeUnit.HOURS);//将内容存入redis中
@@ -110,7 +127,7 @@ public class CustomerAction extends BaseAction<Customer>{
 			response.getWriter().println("对不起,验证码已经失效");
 			return NONE;
 		}
-		WebClient.create("http://localhost:8002/crm_management/services/customerservice/customers")
+		WebClient.create(Constants.CRM_MANAGEMENT_URL+"/services/customerservice/customers")
 		.path("/type")
 		.path("/"+model.getTelephone())
 		.path("/"+1)

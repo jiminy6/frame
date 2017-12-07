@@ -20,17 +20,16 @@
 				<configuration>
 					<!-- 端口号 -->
 					<port>9001</port>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-				<port>8080</port>
-				<path>/</path>
+					<path>/</path>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	<dependencies>
+		<dependency>
+			<groupId>cn.itcast.projects</groupId>
+			<artifactId>bos_common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>

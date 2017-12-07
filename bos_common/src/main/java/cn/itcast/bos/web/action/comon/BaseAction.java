@@ -1,4 +1,4 @@
-package cn.itcast.bos.web.action;
+package cn.itcast.bos.web.action.comon;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -16,7 +16,6 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
-import cn.itcast.bos.domain.base.Courier;
 @Controller
 @ParentPackage("json-default")
 @Namespace("/")
@@ -43,6 +42,7 @@ public class BaseAction<T> extends ActionSupport implements ModelDriven<T>{
 	 */
 	private static final long serialVersionUID = 1L;
 	public static final String JSON ="json";// 定义字符串常量
+	public static final String REDIRECT="redirect";
 	protected T model;
 	@Override
 	public T getModel() {

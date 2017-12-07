@@ -31,6 +31,7 @@ import com.opensymphony.xwork2.ActionContext;
 
 import cn.itcast.bos.domain.base.Area;
 import cn.itcast.bos.service.AreaService;
+import cn.itcast.bos.web.action.comon.BaseAction;
 @Controller
 @Scope("prototype")
 public class AreaAction extends BaseAction<Area>{

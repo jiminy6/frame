@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 
 import cn.itcast.bos.domain.base.Standard;
 import cn.itcast.bos.service.StandardService;
+import cn.itcast.bos.web.action.comon.BaseAction;
  /**
      * 说明：
      * @author luowenxin

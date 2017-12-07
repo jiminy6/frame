@@ -23,7 +23,9 @@ import com.opensymphony.xwork2.ActionContext;
 
 import cn.itcast.bos.domain.base.FixedArea;
 import cn.itcast.bos.service.FixedAreaService;
+import cn.itcast.bos.web.action.comon.BaseAction;
 import cn.itcast.crm.domain.Customer;
+import cn.itcast.utils.Constants;
 @Controller
 public class FixedAreaAction extends BaseAction<FixedArea> {
 
@@ -34,7 +36,7 @@ public class FixedAreaAction extends BaseAction<FixedArea> {
 	@Autowired
 	private FixedAreaService fixedAreaService;
 	@Action(value="fixedArea_save",results={
-			@Result(type="redirect",location="pages/base/fixed_area.html")
+			@Result(type=REDIRECT,location="pages/base/fixed_area.html")
 	})
 	public String save(){
 		fixedAreaService.save(model);
@@ -68,7 +70,8 @@ public class FixedAreaAction extends BaseAction<FixedArea> {
 	
 	@Action("fixedArea_listCustomerListByFixedAreaId")
 	public String findByfixedAreaId(){
-	    Collection<? extends Customer> collection = WebClient.create("http://localhost:8002/crm_management/services/customerservice/customers")
+//	    Collection<? extends Customer> collection = WebClient.create("http://localhost:8002/crm_management/services/customerservice/customers"
+	    		Collection<? extends Customer> collection = WebClient.create(Constants.CRM_MANAGEMENT_URL+"/services/customerservice/customers")
 		.path("/fixedaread")
 		.path("/"+model.getId())
 		.accept(MediaType.APPLICATION_JSON)
@@ -78,7 +81,8 @@ public class FixedAreaAction extends BaseAction<FixedArea> {
 	}
 	@Action("fixedArea_listCustomerListNoFixedAreaId")
 	public String findnofixedArea(){
-		 Collection<? extends Customer> collection = WebClient.create("http://localhost:8002/crm_management/services/customerservice/customers")
+//		 Collection<? extends Customer> collection = WebClient.create("http://localhost:8002/crm_management/services/customerservice/customers")
+				 Collection<? extends Customer> collection = WebClient.create(Constants.CRM_MANAGEMENT_URL+"/services/customerservice/customers")
 					.path("/nofixedaread")
 					.accept(MediaType.APPLICATION_JSON)
 					.getCollection(Customer.class);
@@ -89,11 +93,12 @@ public class FixedAreaAction extends BaseAction<FixedArea> {
 	public void setIds(String ids) {
 		this.ids = ids;
 	}
-	@Action(value="fixedArea_updatearea",results={@Result(type="redirect",location="/pages/base/fixed_area.html")})
+	@Action(value="fixedArea_updatearea",results={@Result(type=REDIRECT,location="/pages/base/fixed_area.html")})
 	public String updatefixedarea(){
 		String customerIds=StringUtils.join(ids,",");
 		System.out.println(customerIds);
-		WebClient.create("http://localhost:8002/crm_management/services/customerservice/customers")
+//		WebClient.create("http://localhost:8002/crm_management/services/customerservice/customers")
+		WebClient.create(Constants.CRM_MANAGEMENT_URL+"/services/customerservice/customers")
 		.path("/fixedaread")
 		.path("/"+model.getId())
 		.path("/"+customerIds)

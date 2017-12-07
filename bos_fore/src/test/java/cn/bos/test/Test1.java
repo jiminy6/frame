@@ -16,6 +16,6 @@ public class Test1 {
 		redisTemplate.opsForValue().set("username2", "小红");
 		//基本取值
 		System.out.println(redisTemplate.opsForValue().get("username2"));
-
+		
 	}
 }

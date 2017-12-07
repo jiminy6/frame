@@ -26,6 +26,7 @@ import com.opensymphony.xwork2.ActionContext;
 
 import cn.itcast.bos.domain.base.Courier;
 import cn.itcast.bos.service.CourierService;
+import cn.itcast.bos.web.action.comon.BaseAction;
  /**
      * 说明：
      * @author luowenxin

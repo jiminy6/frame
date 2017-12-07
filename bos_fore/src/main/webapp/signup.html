@@ -139,7 +139,6 @@
                             method: 'POST',
                             //请求地址
                             url: 'customer_sendCheckcode',
-//                            url: 'aaa.action',
                             //请求的参数
                             params:{"telephone":$scope.telephone}
                         }).then(function successCallback(response) {
@@ -149,7 +148,6 @@
                             // 请求失败执行代码
                             alert("验证码发送失败！请联系管理员！");
                         });
-
                         flag=false;
                         interval=window.setInterval(function () {
 							if(second==0){
