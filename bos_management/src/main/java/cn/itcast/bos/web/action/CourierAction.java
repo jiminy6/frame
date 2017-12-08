@@ -125,4 +125,18 @@ public class CourierAction extends BaseAction<Courier> {
 		ActionContext.getContext().getValueStack().push(resultMap);
 		return JSON;
 	}
+	 
+	    /**
+	     * 说明：返回所有有效的快递员信息
+	     * @return
+	     * @author luowenxin
+	     * @time：2017年12月7日 下午8:03:02
+	     */
+	@Action("courier_listNoDeltag")
+	public String findNoDeltag(){
+		List<Courier> courierList=courierService.findNoDeltag();
+		ActionContext.getContext().getValueStack().push(courierList);
+		return JSON;
+	}
+	
 }

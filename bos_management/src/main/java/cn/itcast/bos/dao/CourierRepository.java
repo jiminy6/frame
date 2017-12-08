@@ -1,5 +1,7 @@
 package cn.itcast.bos.dao;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -23,5 +25,8 @@ public interface CourierRepository extends JpaRepository<Courier, Integer> ,JpaS
 	
 	@Query("update Courier set deltag=?2 where id=?1")
 	@Modifying
-	public void deleteBatch(Integer id, char deltag);
+	public void deleteBatch(Integer id, Character deltag);
+	
+	List<Courier> findByDeltag(Character deltag);
+	
 }

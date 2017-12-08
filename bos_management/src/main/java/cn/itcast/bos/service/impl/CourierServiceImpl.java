@@ -1,5 +1,7 @@
 package cn.itcast.bos.service.impl;
 
+import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -33,6 +35,11 @@ public class CourierServiceImpl implements CourierService {
 				courierRepository.deleteBatch(Integer.parseInt(id),'1');
 			}
 		}
+	}
+	@Override
+	public List<Courier> findNoDeltag() {
+		List<Courier> courierList=courierRepository.findByDeltag('0');
+		return courierList;
 	}
 
 }

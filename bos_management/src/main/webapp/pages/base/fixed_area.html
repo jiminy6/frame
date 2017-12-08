@@ -50,7 +50,7 @@
 					$(data).each(function(){
 						//在未关联的select下拉框添加options
 // 				$("#noassociationSelect").append('<option value="'+this.id+'">+'this.username'+'+this.telephone+'</option>');
-				$("#noassociationSelect").append("<option value='"+this.id+"'>+"this.username+"("+this.telephone+")"</option>");
+				$("#noassociationSelect").append("<option value='"+this.id+"'>"+this.username+"("+this.telephone+")</option>");
 						var option=$("<option value='"+this.id+"'>"+this.username+"("+this.telephone+")</option>");
 						$("#noassociationSelect").append(option);
 					})
@@ -64,14 +64,23 @@
 					})
 				})
 			}
-			
 			// 弹出关联快递员窗口
 			function doAssociationCourier(){
-				$("#courierWindow").window("open");
-				
+				var rows=$("#grid").datagrid("getSelections");
+				if(rows.length!=1){
+					$.messager.alert("提示","必须选中一个","info");
+					return;
+				}
+				$("#courierFixedAreaId").val(rows[0].id)//给隐藏域赋值
+				$("#courierWindow").window("open"); 
 			}
 			// 弹出关联分区窗口
 			function doAssociationSubarea(){
+				var rows=$("#grid").datagrid("getSelections");
+				if(rows.length!=1){
+					$.messager.alert("提示","必须选中一个","info");
+					return;
+				}
 				$("#subAreaWindow").window("open");
 			
 			}
@@ -235,6 +244,10 @@
 
 				// 为关联快递员按钮，添加click事件
 				$("#associationCourierBtn").click(function() {
+				    //检验之后提交
+					if($("#courierForm").form("validate")){
+						$("#courierForm").submit();
+					}
 				});
 			});
 
@@ -539,15 +552,15 @@
 								<!-- 存放定区编号 -->
 								<input type="hidden" name="id" id="courierFixedAreaId" />
 								<input type="text" name="courierId" class="easyui-combobox" required="true" 
-									data-options="url:'../../courier_findnoassociation.action',
-										valueField:'id',textField:'info'"/>
+									data-options="url:'../../courier_listNoDeltag.action',
+										valueField:'id',textField:'name'"/>
 							</td>
 						</tr>
 						<tr>
 							<td>选择收派时间</td>
 							<td>
 								<input type="text" name="takeTimeId" class="easyui-combobox" required="true"
-									data-options="url:'../../taketime_findAll.action', 
+									data-options="url:'../../takeTime_listNoDel.action', 
 									valueField:'id',textField:'name'" />
 							</td>
 						</tr>

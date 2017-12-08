@@ -13,6 +13,7 @@ import org.apache.cxf.jaxrs.client.WebClient;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -26,7 +27,20 @@ import cn.itcast.bos.service.FixedAreaService;
 import cn.itcast.bos.web.action.comon.BaseAction;
 import cn.itcast.crm.domain.Customer;
 import cn.itcast.utils.Constants;
+ /**
+     * 说明：
+     * @author luowenxin
+     * @version 1.0
+     * @date 2017年12月7日
+     */
+ /**
+     * 说明：
+     * @author luowenxin
+     * @version 1.0
+     * @date 2017年12月7日
+     */
 @Controller
+@Scope("prototype")
 public class FixedAreaAction extends BaseAction<FixedArea> {
 
 	/**
@@ -104,6 +118,27 @@ public class FixedAreaAction extends BaseAction<FixedArea> {
 		.path("/"+customerIds)
 		.accept(MediaType.APPLICATION_JSON)
 		.put(null);
+		return SUCCESS;
+	}
+	private Integer courierId;
+	private Integer takeTimeId;
+	public void setCourierId(Integer courierId) {
+		this.courierId = courierId;
+	}
+	public void setTakeTimeId(Integer takeTimeId) {
+		this.takeTimeId = takeTimeId;
+	}
+	@Action(value="fixedArea_associationCourierToFixedArea",results={@Result(type=REDIRECT,location="/pages/base/fixed_area.html")})
+	/**
+	 * 
+	     * 说明:定区关联快递员(根据takeTimeId和courierId)
+	     * 涉及到多表操作,采用hibernate的快照:先查再改
+	     * @return
+	     * @author luowenxin
+	     * @time：2017年12月7日 下午9:02:26
+	 */
+	public String associationCourierToFixedArea(){
+		fixedAreaService.associationCourierToFixedArea(model,courierId,takeTimeId);
 		return SUCCESS;
 	}
 }
