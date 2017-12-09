@@ -19,6 +19,7 @@ import cn.itcast.bos.dao.WorkBillRepository;
 import cn.itcast.bos.domain.base.Area;
 import cn.itcast.bos.domain.base.Courier;
 import cn.itcast.bos.domain.base.FixedArea;
+import cn.itcast.bos.domain.base.SubArea;
 import cn.itcast.bos.domain.take_delivery.Order;
 import cn.itcast.bos.domain.take_delivery.WorkBill;
 import cn.itcast.bos.service.OrderService;
@@ -60,6 +61,7 @@ public class OrderServiceImpl implements OrderService {
 		.accept(MediaType.APPLICATION_JSON)
 		.get(Customer.class);
 		System.out.println(customer);
+		//先走完全匹配
 		if(customer!=null){
 			String fixedAreaId = customer.getFixedAreaId();
 			System.out.println("=========================================");
@@ -70,20 +72,48 @@ public class OrderServiceImpl implements OrderService {
 				if(couriers!=null&&!couriers.isEmpty()){
 					Courier courier = couriers.iterator().next();
 					order.setCourier(courier);//关联快递员
-					WorkBill workBill = new WorkBill();
-				   //设置工单
-					workBill.setRemark(order.getRemark());
-					workBill.setCourier(courier);
-					workBill.setBuildtime(new Date());
-					workBill.setType("新");
-					workBill.setOrder(order);
-					workBill.setSmsNumber("2222");
-					workBill.setAttachbilltimes(0);
-					workBill.setPickstate("新单");
-				    workBillRepository.save(workBill);
+					saveWorkBill(order, courier);
+					return ;//当某个规则匹配的时,不在继续派单
 				}
 			}
 		}
+		//关键字匹配
+		if(sendArea!=null){
+			Set<SubArea> subareas = sendArea.getSubareas();//获取区域下的所有的分区信息
+			for (SubArea sub : subareas) {
+				//如果订单地址包含分区的关键字
+				if(order.getSendAddress().contains(sub.getKeyWords())){
+					FixedArea fixedArea = sub.getFixedArea();//通过分区找到定区
+					if(fixedArea!=null){
+						Set<Courier> couriers = fixedArea.getCouriers();
+						if(couriers!=null&&!couriers.isEmpty()){
+							Courier courier = couriers.iterator().next();
+							order.setOrderType("自动分单");
+							order.setCourier(courier);//关联快递员
+							saveWorkBill(order, courier);
+							return ;
+						}
+						
+					}
+					break;
+				}
+			}
+			
+		}
+		
+	}
+	private void saveWorkBill(Order order, Courier courier) {
+		WorkBill workBill = new WorkBill();
+         //设置工单
+		workBill.setRemark(order.getRemark());
+		workBill.setCourier(courier);
+		workBill.setBuildtime(new Date());
+		workBill.setType("新");
+		workBill.setOrder(order);
+		workBill.setSmsNumber("2222");
+		workBill.setAttachbilltimes(0);
+		workBill.setPickstate("新单");
+		workBillRepository.save(workBill);
 	}
 
 }

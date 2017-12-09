@@ -137,4 +137,6 @@ public class CustomerAction extends BaseAction<Customer>{
 		redisTemplate.delete(model.getTelephone());//成功之后删除激活码
 		return NONE;
 	}
+	
+	
 }
