@@ -38,4 +38,16 @@ public interface CustomerRepository  extends JpaRepository<Customer, Integer> {
 	@Query("update Customer set type=?2 where telephone=?1")
 	@Modifying
 	void updateTypeByTelephone(String telephone,Integer type);
+
+		 
+		    /**
+		     * 说明：在customer表中根据地址查询定区的编号
+		     * @param address
+		     * @return
+		     * @author luowenxin
+		     * @time：2017年12月8日 上午10:45:14
+		     */
+	    @Query("select fixedAreaId from Customer where address=?")
+//		String  findFixedAreaIdByAddress(String address);//这个不是一个属性表达式，前面需要加上@query
+	    String  findFixedAreaIdByAddress(String address);
 }

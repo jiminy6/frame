@@ -49,7 +49,19 @@ public interface CustomerService {
 	
 	@POST
 	public void saveCustomer(Customer customer);
+	
 	@Path("type/{telephone}/{type}")
 	@PUT
 	public void activeCustomer(@PathParam("telephone")String telephone,@PathParam("type")Integer type);
+	
+     
+        /**
+         * 说明：根据定区的地址，查询定区的编号
+         * @return
+         * @author luowenxin
+         * @time：2017年12月8日 上午10:36:40
+         */
+	@Path("/fixedareaid/address/{address}")
+	@GET
+    public Customer  findFixedAreaByAddress(@PathParam("address")String address);
 }

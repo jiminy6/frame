@@ -59,5 +59,22 @@ public class CustomerServiceImpl implements CustomerService {
 	public void activeCustomer(String telephone, Integer type) {
 		customerRepository.updateTypeByTelephone(telephone, type);
 	}
+	
+	/**
+	 * 这里可以返回Sting类型的，但最好还是返回customer类型
+	 * 因为面向对象的思想，一般都是用容器来接收,list,map,或java对象
+	 */
+	@Override
+	public Customer findFixedAreaByAddress(String address) {
+		Customer customer = new Customer();
+	  String fixedAreaId = customerRepository.findFixedAreaIdByAddress(address);
+	  if(StringUtils.isNotBlank(fixedAreaId)&&!fixedAreaId.isEmpty()){
+		  customer.setFixedAreaId(fixedAreaId);
+		  return customer;
+	  }
+	  else{
+		  return null;
+	  }
+	}
 
 }

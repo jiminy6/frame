@@ -104,6 +104,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 		TbContentCategory content = contentCategoryMapper.selectByPrimaryKey(id);
 		content.setName(name);
 		contentCategoryMapper.updateByPrimaryKey(content);
+	    
 		return TaotaoResult.ok(content);
 	}
 }

@@ -17,7 +17,6 @@ import cn.e3mall.service.ItemCatService;
 public class ItemCatServiceImpl implements ItemCatService {
 	@Autowired
 	private TbItemCatMapper tbitemCatMapper;
-
 	@Override
 	public List<TbItemCat> getAllItemCat() {
 		TbItemCatExample example = new TbItemCatExample();
