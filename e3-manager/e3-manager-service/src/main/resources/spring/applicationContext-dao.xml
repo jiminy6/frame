@@ -26,6 +26,7 @@
 	<property name="dataSource" ref="dataSource"></property>
 	<property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml"></property>
 	</bean>
+	<!-- mapper动态代理开发，扫描 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 	<property name="basePackage" value="cn.e3mall.mapper"></property>
 	</bean>
