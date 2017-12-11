@@ -38,6 +38,11 @@ public class OrderServiceImpl implements OrderService {
 	private WorkBillRepository workBillRepository ;
 	@Override
 	public void add(Order order) {
+		System.out.println("======================================"+"成功！");
+		
+		if(1==1){
+			return ;
+		}
 	    Area sendArea = areaRepository.findByProvinceAndCityAndDistrict(order.getSendArea().getProvince(),order.getSendArea().getCity(),order.getSendArea().getDistrict());
 		Area recArea = areaRepository.findByProvinceAndCityAndDistrict(order.getRecArea().getProvince(),order.getRecArea().getCity(),order.getRecArea().getDistrict());
 		order.setRecArea(recArea);

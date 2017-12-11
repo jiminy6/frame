@@ -15,16 +15,27 @@
     </filter>
     <filter-mapping>
         <filter-name>struts2</filter-name>
-         <url-pattern>/*</url-pattern>
+         <url-pattern>*.action</url-pattern>
     </filter-mapping>
+    <!-- cxf的前端控制器 -->
+	<servlet>
+		<servlet-name>cxf</servlet-name>
+		<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cxf</servlet-name>
+		<url-pattern>/services/*</url-pattern>
+	</servlet-mapping>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:applicationContext.xml</param-value>
+		<param-value>classpath:applicationContext*.xml</param-value>
 	</context-param>
 <!-- 	spring核心监听器 -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>

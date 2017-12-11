@@ -18,6 +18,7 @@
 			var editIndex ;
 			
 			function doAdd(){
+			    //js中初始值默认是undefined
 				if(editIndex != undefined){
 					$("#grid").datagrid('endEdit',editIndex);
 				}
@@ -31,9 +32,10 @@
 					editIndex = 0;
 				}
 			}
-			
+
 			function doSave(){
 				$("#grid").datagrid('endEdit',editIndex );
+
 			}
 			
 			function doCancel(){
@@ -65,8 +67,8 @@
 			}];
 			// 定义列
 			var columns = [ [ {
-				field : 'id',
-				title : '工作单号',
+				field : 'wayBillNum',
+				title : '运单编号',
 				width : 120,
 				align : 'center',
 				editor :{
@@ -76,7 +78,7 @@
 					}
 				}
 			}, {
-				field : 'arrivecity',
+				field : 'arriveCity',
 				title : '到达地',
 				width : 120,
 				align : 'center',
@@ -87,8 +89,8 @@
 					}
 				}
 			},{
-				field : 'product',
-				title : '产品',
+				field : 'goodType',
+				title : '托寄物类型',
 				width : 120,
 				align : 'center',
 				editor :{
@@ -146,13 +148,26 @@
 					pageList: [30,50,100],
 					pagination : true,
 					toolbar : toolbar,
-					url :  "",
+					url :  "../../waybill_page.action",
 					idField : 'id',
 					columns : columns,
 					onDblClickRow : doDblClickRow,
 					onAfterEdit : function(rowIndex, rowData, changes){
-						console.info(rowData);
-						editIndex = undefined;
+					    $.post("../../waybill_addquick.action",rowData,function (data) {
+							if(data.result){
+							    $.messager.show({
+									title:"恭喜",
+									msg:"保存运单成功",
+									timeout:2000  
+								})
+							}
+							else {
+							    $.messager.alert("提示","保存运单失败","info")
+							}
+							//这里面用load是去掉了一些分页条件，让新添加的在最上面，方便之后的排序
+							$("#grid").datagrid("load");
+                        });
+							editIndex = undefined;
 					}
 				});
 			});
