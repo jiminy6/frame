@@ -33,6 +33,9 @@
 	<dubbo:registry protocol="zookeeper" address="192.168.78.134:2181"/>	
 	<dubbo:reference interface="cn.e3mall.service.ItemService" id="itemService" />
 	<dubbo:reference interface="cn.e3mall.service.ItemCatService" id="itemCatService" />
+	<dubbo:reference interface="cn.e3mall.content.service.ContentCategoryService" id="contentCategoryService" />
+	<dubbo:reference interface="cn.e3mall.content.service.ContentService" id="contentService" />
+	<dubbo:reference interface="cn.e3mall.search.service.SearchItemService" id="searchItemService" />
 	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
 	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
 </beans>
