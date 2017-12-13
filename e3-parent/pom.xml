@@ -226,9 +226,9 @@
 				<artifactId>freemarker</artifactId>
 				<version>${freemarker.version}</version>
 			</dependency>
+			
 		</dependencies>
 	</dependencyManagement>
-
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
@@ -265,4 +265,5 @@
 		</pluginManagement>
 	</build>
 	<groupId>cn.e3mall</groupId>
+	
 </project>

@@ -9,4 +9,5 @@ public interface ItemService {
 	TbItem getItemById(Long id);
 	EasyUiDataGridResult getItemList(int page,int rows);
 	TaotaoResult addItem(TbItem item,String desc);
+	TbItemDesc getItemDescById(Long id);
 }

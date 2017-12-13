@@ -1,4 +1,5 @@
-/develop/workspaces/workspace1/e3-search/e3-search-service/src/main/java/cn/e3mall/search/service/impl/SearchItemServiceImpl.java
-/develop/workspaces/workspace1/e3-search/e3-search-service/src/main/java/cn/e3mall/search/service/impl/SearchServiceImpl.java
-/develop/workspaces/workspace1/e3-search/e3-search-service/src/main/java/cn/e3mall/search/dao/SearchDao.java
-/develop/workspaces/workspace1/e3-search/e3-search-service/src/main/java/cn/e3mall/search/mapper/ItemMapper.java
+/develop/Repository/e3-search/e3-search-service/src/main/java/cn/e3mall/search/dao/SearchDao.java
+/develop/Repository/e3-search/e3-search-service/src/main/java/cn/e3mall/search/mapper/ItemMapper.java
+/develop/Repository/e3-search/e3-search-service/src/main/java/cn/e3mall/search/service/impl/SearchServiceImpl.java
+/develop/Repository/e3-search/e3-search-service/src/main/java/cn/e3mall/search/service/impl/SearchItemServiceImpl.java
+/develop/Repository/e3-search/e3-search-service/src/main/java/cn/e3mall/search/message/ItemAddMessageListener.java
