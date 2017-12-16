@@ -260,5 +260,17 @@
 			<artifactId>activemq-spring</artifactId>
 			<version>${activemq.version}</version>
 		</dependency>
+		<!-- spring data Elasticsearch -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-elasticsearch</artifactId>
+			<version>2.0.11.RELEASE</version>
+		</dependency>
+		<!-- ElasticSearch core -->
+		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch</artifactId>
+			<version>2.4.5</version>
+		</dependency>
 	</dependencies>
 </project>
