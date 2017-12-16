@@ -21,6 +21,6 @@
       <!-- 定义Queue监听器 -->
     <jms:listener-container destination-type="queue" container-type="default" connection-factory="connectionFactory" acknowledge="auto">
        <!-- 注入要处理的消息队列的名字，和要处理的bean对象 -->
-        <jms:listener destination="e3-queue" ref="myListener"/>
+        <jms:listener destination="e3-topic" ref="myListener"/>
     </jms:listener-container>
 </beans>
