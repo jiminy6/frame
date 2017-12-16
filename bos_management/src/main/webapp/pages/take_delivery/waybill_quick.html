@@ -178,13 +178,31 @@
 				$('#grid').datagrid('beginEdit',rowIndex);
 				editIndex = rowIndex;
 			}
+			function doSearch(value,name){
+				//alert(value+"--"+name);
+				//目标：将这两个值传入后台，刷新列表
+				$("#grid").datagrid("load",{
+					//指定两个参数的名字，随便写。。。
+					"fieldName":name,
+					"fieldValue":value
+				});
+			}
+			
 		</script>
 	</head>
-
 	<body class="easyui-layout" style="visibility:hidden;">
+			<div region="north">
+			<input class="easyui-searchbox" style="width:300px" data-options="searcher:doSearch,prompt:'请输入关键字',menu:'#mm'"/>
+			<!-- 菜单 -->
+			<div id="mm">
+				<div name="arriveCity" data-options="iconCls:'icon-ok'">到达地</div>
+				<div name="goodsType">寄托物类型</div>
+			</div>
+		</div>
+		
 		<div region="center" border="false">
 			<table id="grid"></table>
 		</div>
 	</body>
-
+	
 </html> 

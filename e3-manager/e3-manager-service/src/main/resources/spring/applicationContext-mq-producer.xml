@@ -18,11 +18,12 @@
 		<property name="targetConnectionFactory" ref="amqConnectionFactory"></property>
 		<property name="sessionCacheSize" value="100"></property>
 	</bean>
+	<!-- 这个需要设置成topic,e3-service,和e3-item-web同时订阅这个服务 -->
 	<!-- 定义jmsTemplate的queue类型 -->
 	<bean id="jmsQueueTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<!-- 这个connectionFactory对应的是我们定义的Spring提供的那个ConnectionFactory对象 -->
 		<constructor-arg ref="connectionFactory" />
-		<!-- 非pub/sub模型（发布/订阅），即队列模式 -->
-		<property name="pubSubDomain" value="false" />
+		<!-- pub/sub模型（发布/订阅,即队列模式 -->
+		<property name="pubSubDomain" value="true" />
 	</bean>
 </beans>

@@ -109,8 +109,8 @@ public class ItemServiceImpl implements ItemService {
 		tbItemDesc.setItemId(itemId);
 		itemDescMapper.insert(tbItemDesc);
 		//采用activeMq接收所产生的订单号码
-		jmsTemplate.send("e3-queue", new MessageCreator() {
-			//添加商品的时候将商品的id作为消息(queue序列)，交给queue的消费者处理(e3-search将根据商品的id，将这个商品信息存入索引中)
+		jmsTemplate.send("e3-topic", new MessageCreator() {
+			//添加商品的时候将商品的id作为消息(topic序列)，交给topic的消费者处理(e3-search将根据商品的id，将这个商品信息存入索引中)
 			@Override
 			public Message createMessage(Session session) throws JMSException {
 				TextMessage textMessage = session.createTextMessage(itemId+"");

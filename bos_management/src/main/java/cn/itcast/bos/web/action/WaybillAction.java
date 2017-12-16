@@ -5,6 +5,7 @@ package cn.itcast.bos.web.action;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.Result;
@@ -17,6 +18,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Controller;
 
+import com.ctc.wstx.util.StringUtil;
 import com.opensymphony.xwork2.ActionContext;
 
 import cn.itcast.bos.domain.take_delivery.WayBill;
@@ -53,11 +55,36 @@ public class WaybillAction extends BaseAction<WayBill>{
 		ActionContext.getContext().getValueStack().push(map);
 		return JSON;
 	}
+	 
+	    /**
+	     * 说明：增加了es搜索的选项
+	     * @return
+	     * @author luowenxin
+	     * @time：2017年12月15日 上午12:16:17
+	     */
+	//通过属性驱动获得页面上的fieldName,fieldValue作为keyword,如果这个字段为空就直接全部查询,走数据库
+	//不是用属性驱动获取active,goodstype属性,easyUi的搜索插件中的doSearch中传的是fieldValue和fieldName属性.
+	private String fieldName;
+	private String fieldValue;
+	public void setFieldName(String fieldName) {
+		this.fieldName = fieldName;
+	}
+	public void setFieldValue(String fieldValue) {
+		this.fieldValue = fieldValue;
+	}
 	@Action("waybill_page")
 	public String page(){
 		//加入了排序的选项
-		Pageable pageRequest =  new PageRequest(page-1,rows,new Sort(Direction.DESC,"id"));
-		Page<WayBill> pageResponse=waybillService.page(pageRequest);
+		Pageable pageRequest =new PageRequest(page-1,rows,new Sort(Direction.DESC,"id"));
+		//如果这个为空,就直接走数据库查询
+		//不需要判断fieldName,因为这个字段不可能为空
+		Page<WayBill> pageResponse=null;
+		if(StringUtils.isBlank(fieldValue)){
+			 pageResponse=waybillService.page(pageRequest);
+		}
+		else{
+			pageResponse=waybillService.findWayBillListPage(pageRequest,fieldName,fieldValue);
+		}
 		putDataToStack(pageResponse);//结果存入值栈中
 		return JSON;
 	}

@@ -11,4 +11,5 @@ public interface WaybillService {
 
 	Page<WayBill> page(Pageable pageRequest);
 
+	Page<WayBill> findWayBillListPage(Pageable pageRequest, String fieldName, String fieldValue);
 }
