@@ -3,6 +3,7 @@ package cn.itcast.bos.service.impl;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -31,6 +32,7 @@ public class StandardServiceImpl implements StandardService{
 	     * @author luowenxin
 	     * @time：2017年11月26日 上午10:55:50
 	     */
+	@RequiresRoles("base1")
 	public void save(Standard standard){
 		standard.setOperatingTime(new Date());
 		standardDao.save(standard);

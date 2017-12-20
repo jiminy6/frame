@@ -73,11 +73,12 @@
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
 	<!-- 注解管理事务 -->
-	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<!-- 设置aop方式为cglib -->
+	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
 	<!-- 扫描springdatajpa接口:默认实现提供 -->
 	<jpa:repositories base-package="cn.itcast.bos.dao"/>
 		<import resource="applicationContext-cxf.xml"/>
 	<!-- 引入Elasticsearch配置文件  -->
 		<import resource="applicationContext-es.xml"/>
-	
+		<import resource="applicationContext-shiro.xml"/>
 </beans>

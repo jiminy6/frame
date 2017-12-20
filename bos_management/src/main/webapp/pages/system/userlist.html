@@ -36,12 +36,12 @@
 			var frozenColumns = [ [ {
 				field : 'id',
 				checkbox : true,
-				rowspan : 2
+			//	rowspan : 2
 			}, {
 				field : 'username',
 				title : '名称',
 				width : 80,
-				rowspan : 2
+				//rowspan : 2
 			} ] ];
 		
 		
@@ -59,6 +59,7 @@
 				rowspan : 2,
 				align : 'center'
 			}, {
+				
 				title : '其他信息',
 				colspan : 2
 			}, {
@@ -87,14 +88,14 @@
 					rownumbers : true,
 					striped : true,
 					toolbar : toolbar,
-					url : "../../data/users.json",
+// 					url : "../../data/users.json",
+					url : "../../user_list.action",
 					idField : 'id', 
 					frozenColumns : frozenColumns,
 					columns : columns,
 					onClickRow : onClickRow,
 					onDblClickRow : doDblClickRow
 				});
-				
 				$("body").css({visibility:"visible"});
 				
 			});
