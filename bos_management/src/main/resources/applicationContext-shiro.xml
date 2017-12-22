@@ -31,7 +31,9 @@
 	</bean>
 	<!-- 安全管理器  -->
 	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
-	<property name="realm" ref="bosRealm"></property>
+		<property name="realm" ref="bosRealm"></property>
+		<!-- 开启Shiro缓存功能，需要在shiro安全管理器中注入shiro的 平台缓存管理器 -->
+		<property name="cacheManager" ref="shiroCacheManager" />
 	</bean>
 <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
 	<!-- 开启Shiro注解 -->
@@ -43,9 +45,15 @@
 	下面的两个bean配置：传统的aop编程：增强、切点、切面
 	-->
 	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
-	depends-on="lifecycleBeanPostProcessor"/>
+		depends-on="lifecycleBeanPostProcessor"/>
 	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
 		<!-- 必须注入安全管理器 -->
 		<property name="securityManager" ref="securityManager" />
+	</bean>
+	<!-- shiro整合echcache的缓存配置 -->
+	<!-- 配置Shiro的平台缓存管理 -->
+	<bean id="shiroCacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+		<!-- 注入ehcache的对象 -->
+		<property name="cacheManager" ref="ehCacheManager" />
 	</bean>
 	</beans>

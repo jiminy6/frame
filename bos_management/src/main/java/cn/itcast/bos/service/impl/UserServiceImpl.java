@@ -27,11 +27,14 @@ public class UserServiceImpl implements UserService {
 				user.getRoles().add(one);
 			}
 		}
-		
 	}
 	@Override
 	public List<User> list() {
 		return userRepository.findAll();
+	}
+	@Override
+	public void updateStatusForExpiredTime() {
+		userRepository.updateStatusByActiveTime("0");
 	}
 	
 }

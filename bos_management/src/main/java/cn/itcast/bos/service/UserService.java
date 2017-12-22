@@ -8,4 +8,6 @@ public interface UserService {
 	public void add(User user, Integer[] roleIds);
 
 	public List<User> list();
+
+	public void updateStatusForExpiredTime();
 }

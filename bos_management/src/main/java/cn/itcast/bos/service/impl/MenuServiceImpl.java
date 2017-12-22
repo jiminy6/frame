@@ -3,6 +3,7 @@ package cn.itcast.bos.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -34,6 +35,7 @@ public class MenuServiceImpl implements MenuService {
 	}
 
 	@Override
+	@Cacheable(value="bos_menu_cache",key="#user.id")
 	public List<Menu> listByUser(User user) {
 		if("admin".equals(user.getUsername())){
 			return menuRepository.findByOrderByPriority();

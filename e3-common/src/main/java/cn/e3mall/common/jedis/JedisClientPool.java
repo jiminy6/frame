@@ -1,5 +1,7 @@
 package cn.e3mall.common.jedis;
 
+import java.util.List;
+
 //import org.springframework.beans.factory.annotation.Autowired;
 
 import redis.clients.jedis.Jedis;
@@ -30,6 +32,13 @@ public class JedisClientPool implements JedisClient {
 	public String get(String key) {
 		Jedis jedis = jedisPool.getResource();
 		String result = jedis.get(key);
+		jedis.close();
+		return result;
+	}
+	@Override
+	public Boolean hexists(String key, String field) {
+		Jedis jedis = jedisPool.getResource();
+		Boolean result = jedis.hexists(key, field);
 		jedis.close();
 		return result;
 	}
@@ -89,5 +98,13 @@ public class JedisClientPool implements JedisClient {
 		jedis.close();
 		return result;
 	}
+	@Override
+	public List<String> hvals(String key) {
+		Jedis jedis = jedisPool.getResource();
+		List<String> result = jedis.hvals(key);
+		jedis.close();
+		return result;
+	}
+
 
 }

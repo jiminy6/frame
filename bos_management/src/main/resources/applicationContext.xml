@@ -81,4 +81,6 @@
 	<!-- 引入Elasticsearch配置文件  -->
 		<import resource="applicationContext-es.xml"/>
 		<import resource="applicationContext-shiro.xml"/>
+		<import resource="applicationContext-ehcache.xml"/>
+		<import resource="applicationContext-quartz.xml"/>
 </beans>

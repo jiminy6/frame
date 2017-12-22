@@ -1,5 +1,7 @@
 package cn.e3mall.common.jedis;
 
+import java.util.List;
+
 //import org.springframework.beans.factory.annotation.Autowired;
 
 import redis.clients.jedis.JedisCluster;
@@ -15,6 +17,11 @@ public class JedisClientCluster implements JedisClient {
 
 	public void setJedisCluster(JedisCluster jedisCluster) {
 		this.jedisCluster = jedisCluster;
+	}
+
+	@Override
+	public Boolean hexists(String key, String field) {
+		return jedisCluster.hexists(key, field);
 	}
 
 	@Override
@@ -61,5 +68,8 @@ public class JedisClientCluster implements JedisClient {
 	public Long hdel(String key, String... field) {
 		return jedisCluster.hdel(key, field);
 	}
-
+	@Override
+	public List<String> hvals(String key) {
+		return jedisCluster.hvals(key);
+	}
 }

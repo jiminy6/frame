@@ -6,6 +6,7 @@ import java.util.Set;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
+import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -13,6 +14,7 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import cn.itcast.bos.dao.PermissionRepository;
@@ -74,14 +76,25 @@ public class BosRealm extends AuthorizingRealm{
 		User user = userRepository.findByUsername(username);
 		//如果用户信息不存在就直接返回null
 		if(null==user){
-			return null;
+			return null; 
 		}
 		//如果用户存在就将信息封装到认证信息对象中,交给安全
 		else{
+			if("0".equals(user.getStatus())){
+				throw new LockedAccountException("账号"+user.getUsername()+"过期被锁定");
+			}
 			//第三个参数是realm对象唯一的名字
 			AuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(user,user.getPassword(),super.getName());
 			return simpleAuthenticationInfo;
 		}
 	}
-
+	//指定缓存存放的位置
+	@Value("bos_realm_authentication_cache")
+	public void setBac(String authenticationCacheName){
+		super.setAuthenticationCacheName(authenticationCacheName);
+	}
+	@Value("bos_realm_authorization_cache")
+	public void setA(String authorizationCacheName){
+		super.setAuthorizationCacheName(authorizationCacheName);
+	}
 }

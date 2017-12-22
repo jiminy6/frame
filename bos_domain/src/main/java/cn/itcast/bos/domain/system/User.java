@@ -1,5 +1,6 @@
 package cn.itcast.bos.domain.system;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.apache.struts2.json.annotations.JSON;
 
@@ -21,8 +24,12 @@ import org.apache.struts2.json.annotations.JSON;
  */
 @Entity
 @Table(name = "T_USER")
-public class User {
+public class User implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "C_ID")
@@ -43,7 +50,10 @@ public class User {
 	private String username; // 登陆用户名
 	@Column(name = "C_NICKNAME")
 	private String nickname; // 真实姓名
-	
+	@Column(length=1)
+	private String status="1";
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date activetime;
 	@ManyToMany
 	@JoinTable(name = "T_USER_ROLE", joinColumns = {
 			@JoinColumn(name = "C_USER_ID", referencedColumnName = "C_ID") }, inverseJoinColumns = {
@@ -53,7 +63,6 @@ public class User {
 	public Integer getId() {
 		return id;
 	}
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -128,6 +137,22 @@ public class User {
 
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public Date getActivetime() {
+		return activetime;
+	}
+
+	public void setActivetime(Date activetime) {
+		this.activetime = activetime;
 	}
 
 }
