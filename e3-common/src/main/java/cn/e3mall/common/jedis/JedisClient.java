@@ -15,4 +15,5 @@ public interface JedisClient {
 	Long hdel(String key, String... field);
 	Boolean hexists(String key, String field);
 	List<String> hvals(String key);
+	Long del(String key);
 }

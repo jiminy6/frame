@@ -72,4 +72,9 @@ public class JedisClientCluster implements JedisClient {
 	public List<String> hvals(String key) {
 		return jedisCluster.hvals(key);
 	}
+	@Override
+	public Long del(String key) {
+		return jedisCluster.del(key);
+	}
+
 }

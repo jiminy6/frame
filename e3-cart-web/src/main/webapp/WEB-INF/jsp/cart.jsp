@@ -101,7 +101,6 @@
 		</div>
 	</div>
 	</div>
-	
 	</div>
       <div class="cartOrderCount" id="orderCount">
         <div class="cartButtons">
@@ -116,7 +115,7 @@
       </div>
       <div class="cartJsuan">
          <input onclick="javascript:document.location.href='http://localhost:8012'" class="goshop" value="继续购物" type="button">
-         <input onclick="javascript:document.location.href='http://localhost:8011/cart/cart.html'" class="jiesuan youxuan" value="去结算" type="button">
+         <input onclick="javascript:document.location.href='http://localhost:8014/order/order-cart.html'" class="jiesuan youxuan" value="去结算" type="button">
       </div>
     </div>
 </div>

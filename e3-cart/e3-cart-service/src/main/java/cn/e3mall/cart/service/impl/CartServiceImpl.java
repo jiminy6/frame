@@ -1,4 +1,4 @@
-package cn.e3mall.service.impl;
+package cn.e3mall.cart.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,13 +26,13 @@ public class CartServiceImpl implements CartService {
 	public TaotaoResult addCart(Long userId, Long itemId, Integer num) {
 //		Boolean exists = jedisClient.exists(CART_PRE+""+userId);
 		//判断redis中商品是否存在
-		Boolean hexists = jedisClient.hexists(CART_PRE+""+userId,itemId+"");
+		Boolean hexists = jedisClient.hexists(CART_PRE+":"+userId,itemId+"");
 		if(hexists){
-			String json = jedisClient.hget(CART_PRE+""+userId,itemId+"");
+			String json = jedisClient.hget(CART_PRE+":"+userId,itemId+"");
 	       TbItem tbItem = JsonUtils.jsonToPojo(json,TbItem.class);
 	       tbItem.setNum(tbItem.getNum()+num);
 	       //将数据重新写回redis中
-	       jedisClient.hset(CART_PRE+""+userId,itemId+"",JsonUtils.objectToJson(tbItem));
+	       jedisClient.hset(CART_PRE+":"+userId,itemId+"",JsonUtils.objectToJson(tbItem));
 	       return TaotaoResult.ok();
 		}
 		//如果不存在，就根据商品id取商品的信息，并添加到redis中
@@ -42,7 +42,7 @@ public class CartServiceImpl implements CartService {
 			if(StringUtils.isNotBlank(item.getImage())){
 				item.setImage(item.getImage().split(",")[0]);
 			}
-			jedisClient.hset(CART_PRE+""+userId,itemId+"",JsonUtils.objectToJson(item));
+			jedisClient.hset(CART_PRE+":"+userId,itemId+"",JsonUtils.objectToJson(item));
 			return TaotaoResult.ok();
 		}
 	}
@@ -63,5 +63,23 @@ public class CartServiceImpl implements CartService {
 			itemList.add(item);
 		}
 		return itemList;
+	}
+	@Override
+	public TaotaoResult clear(Long id) {
+		jedisClient.del(CART_PRE+":"+id);
+		return TaotaoResult.ok();
+	}
+	@Override
+	public TaotaoResult updateCartNum(Long userId, Long itemId, int num) {
+		String json = jedisClient.hget(CART_PRE+":"+userId,itemId+"");
+		TbItem item = JsonUtils.jsonToPojo(json,TbItem.class);
+		item.setNum(num);
+		jedisClient.hset(CART_PRE+":"+userId,itemId+"",JsonUtils.objectToJson(item));
+		return TaotaoResult.ok();
+	}
+	@Override
+	public TaotaoResult deleteCart(Long userId, Long itemId) {
+		jedisClient.hdel(CART_PRE+":"+userId,itemId+"");
+		return TaotaoResult.ok();
 	}
 }
