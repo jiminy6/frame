@@ -33,6 +33,8 @@ public class CartHandler implements HandlerInterceptor{
 			return true;
 		}
 		  TbUser user = (TbUser) result.getData();
+		  System.out.println("这个是拦截器");
+		  System.out.println(user);
 		  //将user存入request中
 		  request.setAttribute("user",user);
 		return true;

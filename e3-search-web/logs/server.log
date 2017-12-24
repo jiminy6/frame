@@ -4074,3 +4074,1972 @@ Closing WebApplicationContext for namespace 'e3-search-web-servlet': startup dat
 
 [INFO ] 2017-12-18 23:32:25,321 method:com.alibaba.dubbo.registry.support.AbstractRegistry.unsubscribe(AbstractRegistry.java:343)
  [DUBBO] Unsubscribe: consumer://10.254.6.155/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1576&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513598257782, dubbo version: 2.5.3, current host: 10.254.6.155
+
+
+[INFO ] 2017-12-22 22:54:22,566 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'e3-search-web': initialization started
+
+
+[INFO ] 2017-12-22 22:54:22,603 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'e3-search-web-servlet': startup date [Fri Dec 22 22:54:22 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-22 22:54:22,670 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2017-12-22 22:54:23,073 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2017-12-22 22:54:23,246 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.conf]
+
+
+[INFO ] 2017-12-22 22:54:23,254 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-12-22 22:54:28,722 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, data: {cn.e3mall.sso.service.TokenService=dubbo://192.168.78.1:20883/cn.e3mall.sso.service.TokenService?anyhost=true&application=e3-sso&dubbo=2.5.3&interface=cn.e3mall.sso.service.TokenService&methods=getUserByToken&pid=7264&side=provider&timeout=600000&timestamp=1513685086227 empty://192.168.78.1/cn.e3mall.sso.service.TokenService?application=e3-sso-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.sso.service.TokenService&methods=getUserByToken&pid=7269&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513685137232 empty://192.168.78.1/cn.e3mall.sso.service.TokenService?application=e3-sso-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.sso.service.TokenService&methods=getUserByToken&pid=7269&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513685137232, cn.e3mall.service.ItemService=empty://192.168.78.1/cn.e3mall.service.ItemService?application=e3-cart-web&category=providers&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=getItemList,getItemDescById,addItem,getItemById&pid=1148&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513953952937 empty://192.168.78.1/cn.e3mall.service.ItemService?application=e3-cart-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=getItemList,getItemDescById,addItem,getItemById&pid=1148&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513953952937 empty://192.168.78.1/cn.e3mall.service.ItemService?application=e3-cart-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=getItemList,getItemDescById,addItem,getItemById&pid=1148&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513953952937, cn.e3mall.sso.service.RegisterService=dubbo://192.168.78.1:20883/cn.e3mall.sso.service.RegisterService?anyhost=true&application=e3-sso&dubbo=2.5.3&interface=cn.e3mall.sso.service.RegisterService&methods=register,checkData&pid=7264&side=provider&timeout=600000&timestamp=1513685070694 empty://192.168.78.1/cn.e3mall.sso.service.RegisterService?application=e3-sso-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.sso.service.RegisterService&methods=register,checkData&pid=7269&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513685137174 empty://192.168.78.1/cn.e3mall.sso.service.RegisterService?application=e3-sso-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.sso.service.RegisterService&methods=register,checkData&pid=7269&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513685137174, cn.e3mall.search.service.SearchItemService=empty://192.168.78.1:20882/cn.e3mall.search.service.SearchItemService?anyhost=true&application=e3-search&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchItemService&methods=importAllItems&pid=1322&side=provider&timeout=600000&timestamp=1513954388895, cn.e3mall.content.service.ContentService=dubbo://192.168.78.1:20881/cn.e3mall.content.service.ContentService?anyhost=true&application=e3-content&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentService&methods=addContent,findContentListByCid&pid=1312&side=provider&timeout=600000&timestamp=1513954089766 empty://192.168.78.1/cn.e3mall.content.service.ContentService?application=e3-portal-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentService&methods=addContent,findContentListByCid&pid=1288&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954207771 empty://192.168.78.1/cn.e3mall.content.service.ContentService?application=e3-portal-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentService&methods=addContent,findContentListByCid&pid=1288&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954207771, cn.e3mall.search.service.SearchService=empty://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1322&side=provider&timeout=600000&timestamp=1513954399479, cn.e3mall.content.service.ContentCategoryService=empty://192.168.78.1:20881/cn.e3mall.content.service.ContentCategoryService?anyhost=true&application=e3-content&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentCategoryService&methods=updateContentCategory,getContentCatList,addContentCategory&pid=1566&side=provider&timeout=600000&timestamp=1513598256338, cn.e3mall.sso.service.LoginService=dubbo://192.168.78.1:20883/cn.e3mall.sso.service.LoginService?anyhost=true&application=e3-sso&dubbo=2.5.3&interface=cn.e3mall.sso.service.LoginService&methods=login&pid=7264&side=provider&timeout=600000&timestamp=1513685081181 empty://192.168.78.1/cn.e3mall.sso.service.LoginService?application=e3-sso-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.sso.service.LoginService&methods=login&pid=7269&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513685121397 empty://192.168.78.1/cn.e3mall.sso.service.LoginService?application=e3-sso-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.sso.service.LoginService&methods=login&pid=7269&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513685121397, cn.e3mall.service.ItemCatService=empty://192.168.78.1:20880/cn.e3mall.service.ItemCatService?anyhost=true&application=e3-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.service.ItemCatService&methods=getAllItemCat,getByParentNode&pid=7272&side=provider&timeout=600000&timestamp=1513685154736}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-22 22:54:28,833 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2017-12-22 22:54:33,854 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2017-12-22 22:54:33,855 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=localhost
+
+
+[INFO ] 2017-12-22 22:54:33,855 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.7.0_79
+
+
+[INFO ] 2017-12-22 22:54:33,855 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2017-12-22 22:54:33,856 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre
+
+
+[INFO ] 2017-12-22 22:54:33,856 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=/usr/local/maven/boot/plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2017-12-22 22:54:33,857 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=/Users/luowenxin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+
+
+[INFO ] 2017-12-22 22:54:33,857 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=/var/folders/5k/hrq4shs115l4btq3gk9h1yqh0000gn/T/
+
+
+[INFO ] 2017-12-22 22:54:33,858 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2017-12-22 22:54:33,860 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Mac OS X
+
+
+[INFO ] 2017-12-22 22:54:33,860 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=x86_64
+
+
+[INFO ] 2017-12-22 22:54:33,861 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.12.6
+
+
+[INFO ] 2017-12-22 22:54:33,861 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=luowenxin
+
+
+[INFO ] 2017-12-22 22:54:33,861 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=/Users/luowenxin
+
+
+[INFO ] 2017-12-22 22:54:33,862 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=/develop/Repository/e3-search-web
+
+
+[INFO ] 2017-12-22 22:54:33,864 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.78.134:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@74bbd2cd
+
+
+[INFO ] 2017-12-22 22:54:33,896 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-22 22:54:33,913 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[INFO ] 2017-12-22 22:54:33,940 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.78.134/192.168.78.134:2181, sessionid = 0x160603cc2c80052, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-22 22:54:33,944 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-22 22:54:39,037 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 22:54:39,071 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 22:54:39,111 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, urls: [dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1322&side=provider&timeout=600000&timestamp=1513954399479, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 22:54:39,325 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.78.1:20882 from NettyClient 192.168.78.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x14511511, /192.168.78.1:50140 => /192.168.78.1:20882]], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 22:54:39,326 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient /192.168.78.1 connect to the server /192.168.78.1:20882, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 22:54:39,407 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service cn.e3mall.search.service.SearchService from url zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=e3-search-web&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timeout=600000&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 22:54:39,569 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String cn.e3mall.search.controller.SearchController.search(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2017-12-22 22:54:39,931 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'e3-search-web-servlet': startup date [Fri Dec 22 22:54:22 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-22 22:54:40,001 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'e3-search-web-servlet': startup date [Fri Dec 22 22:54:22 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-22 22:54:40,084 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+
+
+[INFO ] 2017-12-22 22:54:40,175 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'e3-search-web': initialization completed in 17604 ms
+
+
+[WARN ] 2017-12-22 23:47:43,312 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 824170ms for sessionid 0x160603cc2c80052
+
+
+[INFO ] 2017-12-22 23:47:43,322 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 824170ms for sessionid 0x160603cc2c80052, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-22 23:47:43,429 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Disconnected)
+
+
+[INFO ] 2017-12-22 23:47:44,548 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-22 23:47:47,954 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.78.1:20882,url:dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timeout=600000&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 23:47:48,247 method:com.alibaba.dubbo.remoting.transport.netty.NettyClient.doConnect(NettyClient.java:101)
+ [DUBBO] Close old netty channel [id: 0x14511511, /192.168.78.1:50140 :> /192.168.78.1:20882] on create new netty channel [id: 0xaa56296c, /192.168.78.1:51497 => /192.168.78.1:20882], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 23:47:48,248 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.78.1:20882 from NettyClient 192.168.78.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0xaa56296c, /192.168.78.1:51497 => /192.168.78.1:20882]], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[WARN ] 2017-12-22 23:48:14,555 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31126ms for sessionid 0x160603cc2c80052
+
+
+[INFO ] 2017-12-22 23:48:14,560 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31126ms for sessionid 0x160603cc2c80052, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-22 23:48:15,881 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-22 23:48:15,883 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[INFO ] 2017-12-22 23:48:15,902 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Expired)
+
+
+[WARN ] 2017-12-22 23:48:15,902 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1285)
+Unable to reconnect to ZooKeeper service, session 0x160603cc2c80052 has expired
+
+
+[INFO ] 2017-12-22 23:48:15,903 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.78.134:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@74bbd2cd
+
+
+[INFO ] 2017-12-22 23:48:15,906 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1154)
+Unable to reconnect to ZooKeeper service, session 0x160603cc2c80052 has expired, closing socket connection
+
+
+[INFO ] 2017-12-22 23:48:15,907 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-22 23:48:15,908 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:282)
+ [DUBBO] Recover register url [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 23:48:15,909 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:292)
+ [DUBBO] Recover subscribe url [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 23:48:15,913 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[INFO ] 2017-12-22 23:48:15,921 method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:519)
+EventThread shut down for session: 0x160603cc2c80052
+
+
+[INFO ] 2017-12-22 23:48:15,934 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.78.134/192.168.78.134:2181, sessionid = 0x160603cc2c8005c, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-22 23:48:15,936 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-22 23:48:15,941 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, urls: [dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1322&side=provider&timeout=600000&timestamp=1513954399479], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 23:48:15,962 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 23:48:15,982 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 23:48:16,051 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:309)
+ [DUBBO] Retry register [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 23:48:16,135 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:354)
+ [DUBBO] Retry subscribe {consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634=[com.alibaba.dubbo.registry.integration.RegistryDirectory@4d0e6977]}, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-22 23:48:16,284 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, urls: [dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1322&side=provider&timeout=600000&timestamp=1513954399479, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[WARN ] 2017-12-23 08:50:33,499 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 27163522ms for sessionid 0x160603cc2c8005c
+
+
+[WARN ] 2017-12-23 08:50:33,588 method:com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask.run(HeartBeatTask.java:71)
+ [DUBBO] Close channel HeaderExchangeClient [channel=com.alibaba.dubbo.remoting.transport.netty.NettyClient [/192.168.78.1:51497 -> /192.168.78.1:20882]], because heartbeat read idle time out: 180000ms, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:33,589 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 27163522ms for sessionid 0x160603cc2c8005c, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 08:50:33,614 method:com.alibaba.dubbo.remoting.transport.netty.NettyChannel.close(NettyChannel.java:135)
+ [DUBBO] Close netty channel [id: 0xaa56296c, /192.168.78.1:51497 => /192.168.78.1:20882], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:33,656 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.78.1:20882,url:dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timeout=600000&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:33,683 method:com.alibaba.dubbo.remoting.transport.netty.NettyClient.doConnect(NettyClient.java:101)
+ [DUBBO] Close old netty channel [id: 0xaa56296c, /192.168.78.1:51497 :> /192.168.78.1:20882] on create new netty channel [id: 0xe39391ee, /192.168.78.1:55859 => /192.168.78.1:20882], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:33,685 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.78.1:20882 from NettyClient 192.168.78.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0xe39391ee, /192.168.78.1:55859 => /192.168.78.1:20882]], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:33,701 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Disconnected)
+
+
+[INFO ] 2017-12-23 08:50:35,682 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-23 08:50:35,696 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[WARN ] 2017-12-23 08:50:35,831 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1285)
+Unable to reconnect to ZooKeeper service, session 0x160603cc2c8005c has expired
+
+
+[INFO ] 2017-12-23 08:50:35,831 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1154)
+Unable to reconnect to ZooKeeper service, session 0x160603cc2c8005c has expired, closing socket connection
+
+
+[INFO ] 2017-12-23 08:50:35,832 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Expired)
+
+
+[INFO ] 2017-12-23 08:50:35,832 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.78.134:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@74bbd2cd
+
+
+[INFO ] 2017-12-23 08:50:35,836 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:282)
+ [DUBBO] Recover register url [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:35,837 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:292)
+ [DUBBO] Recover subscribe url [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:35,837 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-23 08:50:35,836 method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:519)
+EventThread shut down for session: 0x160603cc2c8005c
+
+
+[INFO ] 2017-12-23 08:50:35,845 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[INFO ] 2017-12-23 08:50:35,961 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.78.134/192.168.78.134:2181, sessionid = 0x160603cc2c8006c, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-23 08:50:35,962 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-23 08:50:36,007 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:36,047 method:com.alibaba.dubbo.remoting.transport.netty.NettyChannel.close(NettyChannel.java:135)
+ [DUBBO] Close netty channel [id: 0xe39391ee, /192.168.78.1:55859 => /192.168.78.1:20882], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[WARN ] 2017-12-23 08:50:36,089 method:com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:221)
+ [DUBBO] Failed to save registry store file, cause: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties, dubbo version: 2.5.3, current host: 192.168.78.1
+java.io.IOException: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:193)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry$SaveProperties.run(AbstractRegistry.java:150)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+[INFO ] 2017-12-23 08:50:36,103 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.78.1:20882,url:dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timeout=600000&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[WARN ] 2017-12-23 08:50:36,154 method:com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:221)
+ [DUBBO] Failed to save registry store file, cause: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties, dubbo version: 2.5.3, current host: 192.168.78.1
+java.io.IOException: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:193)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry$SaveProperties.run(AbstractRegistry.java:150)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+[WARN ] 2017-12-23 08:50:36,158 method:com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:221)
+ [DUBBO] Failed to save registry store file, cause: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties, dubbo version: 2.5.3, current host: 192.168.78.1
+java.io.IOException: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:193)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry$SaveProperties.run(AbstractRegistry.java:150)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+[WARN ] 2017-12-23 08:50:36,160 method:com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:221)
+ [DUBBO] Failed to save registry store file, cause: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties, dubbo version: 2.5.3, current host: 192.168.78.1
+java.io.IOException: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:193)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry$SaveProperties.run(AbstractRegistry.java:150)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+[WARN ] 2017-12-23 08:50:36,163 method:com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:221)
+ [DUBBO] Failed to save registry store file, cause: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties, dubbo version: 2.5.3, current host: 192.168.78.1
+java.io.IOException: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:193)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry$SaveProperties.run(AbstractRegistry.java:150)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+[INFO ] 2017-12-23 08:50:36,256 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[WARN ] 2017-12-23 08:50:36,262 method:com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:221)
+ [DUBBO] Failed to save registry store file, cause: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties, dubbo version: 2.5.3, current host: 192.168.78.1
+java.io.IOException: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:193)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry$SaveProperties.run(AbstractRegistry.java:150)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+[INFO ] 2017-12-23 08:50:36,292 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.78.1:20882 from NettyClient 192.168.78.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x3fa1a51d, /192.168.78.1:55889 => /192.168.78.1:20882]], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:36,294 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient /192.168.78.1 connect to the server /192.168.78.1:20882, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:36,355 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[WARN ] 2017-12-23 08:50:36,358 method:com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:221)
+ [DUBBO] Failed to save registry store file, cause: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties, dubbo version: 2.5.3, current host: 192.168.78.1
+java.io.IOException: Can not lock the registry cache file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, ignore and retry later, maybe multi java process use the file, please config: dubbo.registry.file=xxx.properties
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.doSaveProperties(AbstractRegistry.java:193)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry$SaveProperties.run(AbstractRegistry.java:150)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+[INFO ] 2017-12-23 08:50:37,791 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, urls: [dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1322&side=provider&timeout=600000&timestamp=1513954399479], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:37,917 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:309)
+ [DUBBO] Retry register [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:37,953 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:354)
+ [DUBBO] Retry subscribe {consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634=[com.alibaba.dubbo.registry.integration.RegistryDirectory@4d0e6977]}, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 08:50:38,058 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, urls: [dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1322&side=provider&timeout=600000&timestamp=1513954399479, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[WARN ] 2017-12-23 08:52:37,094 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 109033ms for sessionid 0x160603cc2c8006c
+
+
+[INFO ] 2017-12-23 08:52:37,099 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 109033ms for sessionid 0x160603cc2c8006c, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 08:52:37,200 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Disconnected)
+
+
+[INFO ] 2017-12-23 08:52:38,302 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-23 08:52:38,304 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[INFO ] 2017-12-23 08:52:38,306 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.78.134/192.168.78.134:2181, sessionid = 0x160603cc2c8006c, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-23 08:52:38,306 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-23 17:44:54,105 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.78.1:20882,url:dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timeout=600000&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 17:44:54,106 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 17:44:55,483 method:com.alibaba.dubbo.config.AbstractConfig$1.run(AbstractConfig.java:450)
+ [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 17:44:55,506 method:com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(AbstractRegistryFactory.java:63)
+ [DUBBO] Close all registries [zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-search-web&dubbo=2.5.3&interface=com.alibaba.dubbo.registry.RegistryService&pid=1324&timestamp=1513954468676], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 17:44:55,507 method:com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:485)
+ [DUBBO] Destroy registry:zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-search-web&dubbo=2.5.3&interface=com.alibaba.dubbo.registry.RegistryService&pid=1324&timestamp=1513954468676, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 17:44:55,509 method:com.alibaba.dubbo.registry.support.AbstractRegistry.unregister(AbstractRegistry.java:312)
+ [DUBBO] Unregister: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 17:44:55,566 method:com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:494)
+ [DUBBO] Destroy unregister url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 17:44:55,567 method:com.alibaba.dubbo.registry.support.AbstractRegistry.unsubscribe(AbstractRegistry.java:343)
+ [DUBBO] Unsubscribe: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 17:44:55,569 method:com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:510)
+ [DUBBO] Destroy unsubscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 17:44:55,573 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:82)
+Terminate ZkClient event thread.
+
+
+[INFO ] 2017-12-23 17:44:55,579 method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)
+Session: 0x160603cc2c8006c closed
+
+
+[INFO ] 2017-12-23 17:44:55,581 method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:519)
+EventThread shut down for session: 0x160603cc2c8006c
+
+
+[INFO ] 2017-12-23 17:44:55,589 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.destroy(DubboProtocol.java:407)
+ [DUBBO] Close dubbo connect: 192.168.78.1:0-->192.168.78.1:20882, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 17:44:55,589 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.destroy(DubboProtocol.java:421)
+ [DUBBO] Close dubbo connect: 192.168.78.1:0-->192.168.78.1:20882, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 17:44:55,697 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:960)
+Closing WebApplicationContext for namespace 'e3-search-web-servlet': startup date [Fri Dec 22 22:54:22 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-23 17:44:55,856 method:com.alibaba.dubbo.registry.support.AbstractRegistry.unsubscribe(AbstractRegistry.java:343)
+ [DUBBO] Unsubscribe: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1324&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513954463634, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 21:52:16,918 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'e3-search-web': initialization started
+
+
+[INFO ] 2017-12-23 21:52:17,115 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'e3-search-web-servlet': startup date [Sat Dec 23 21:52:17 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-23 21:52:17,419 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2017-12-23 21:52:19,099 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2017-12-23 21:52:19,860 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.conf]
+
+
+[INFO ] 2017-12-23 21:52:19,870 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-12-23 21:52:26,656 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, data: {cn.e3mall.sso.service.TokenService=empty://10.254.9.63/cn.e3mall.sso.service.TokenService?application=e3-order-web&category=providers&dubbo=2.5.3&interface=cn.e3mall.sso.service.TokenService&methods=getUserByToken&pid=5455&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514014501127 empty://10.254.9.63/cn.e3mall.sso.service.TokenService?application=e3-order-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.sso.service.TokenService&methods=getUserByToken&pid=5455&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514014501127 empty://10.254.9.63/cn.e3mall.sso.service.TokenService?application=e3-order-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.sso.service.TokenService&methods=getUserByToken&pid=5455&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514014501127, cn.e3mall.service.ItemService=dubbo://192.168.78.1:20880/cn.e3mall.service.ItemService?anyhost=true&application=e3-manager&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=getItemList,getItemDescById,addItem,getItemById&pid=1287&side=provider&timeout=600000&timestamp=1513954013279 empty://192.168.78.1/cn.e3mall.service.ItemService?application=e3-cart-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=getItemList,getItemDescById,addItem,getItemById&pid=1148&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513955542549 empty://192.168.78.1/cn.e3mall.service.ItemService?application=e3-cart-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=getItemList,getItemDescById,addItem,getItemById&pid=1148&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513955542549, cn.e3mall.order.service.OrderService=empty://10.254.9.63/cn.e3mall.order.service.OrderService?application=e3-order-web&category=providers&dubbo=2.5.3&interface=cn.e3mall.order.service.OrderService&methods=create&pid=5455&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514014485187 empty://10.254.9.63/cn.e3mall.order.service.OrderService?application=e3-order-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.order.service.OrderService&methods=create&pid=5455&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514014485187 empty://10.254.9.63/cn.e3mall.order.service.OrderService?application=e3-order-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.order.service.OrderService&methods=create&pid=5455&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514014485187, cn.e3mall.sso.service.RegisterService=dubbo://192.168.78.1:20883/cn.e3mall.sso.service.RegisterService?anyhost=true&application=e3-sso&dubbo=2.5.3&interface=cn.e3mall.sso.service.RegisterService&methods=register,checkData&pid=7264&side=provider&timeout=600000&timestamp=1513685070694 empty://192.168.78.1/cn.e3mall.sso.service.RegisterService?application=e3-sso-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.sso.service.RegisterService&methods=register,checkData&pid=7269&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513685137174 empty://192.168.78.1/cn.e3mall.sso.service.RegisterService?application=e3-sso-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.sso.service.RegisterService&methods=register,checkData&pid=7269&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513685137174, cn.e3mall.search.service.SearchItemService=empty://192.168.78.1:20882/cn.e3mall.search.service.SearchItemService?anyhost=true&application=e3-search&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchItemService&methods=importAllItems&pid=936&side=provider&timeout=600000&timestamp=1513590923504, cn.e3mall.content.service.ContentService=dubbo://192.168.78.1:20881/cn.e3mall.content.service.ContentService?anyhost=true&application=e3-content&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentService&methods=addContent,findContentListByCid&pid=844&side=provider&timeout=600000&timestamp=1513590103551 empty://10.254.9.30/cn.e3mall.content.service.ContentService?application=e3-portal-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentService&methods=addContent,findContentListByCid&pid=868&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513590346332 empty://10.254.9.30/cn.e3mall.content.service.ContentService?application=e3-portal-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentService&methods=addContent,findContentListByCid&pid=868&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513590346332, cn.e3mall.search.service.SearchService=dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1564&side=provider&timeout=600000&timestamp=1513598267507 empty://10.254.6.155/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1576&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513598257782 empty://10.254.6.155/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1576&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513598257782, cn.e3mall.content.service.ContentCategoryService=empty://192.168.78.1:20881/cn.e3mall.content.service.ContentCategoryService?anyhost=true&application=e3-content&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentCategoryService&methods=updateContentCategory,getContentCatList,addContentCategory&pid=1566&side=provider&timeout=600000&timestamp=1513598256338, cn.e3mall.sso.service.LoginService=dubbo://192.168.78.1:20883/cn.e3mall.sso.service.LoginService?anyhost=true&application=e3-sso&dubbo=2.5.3&interface=cn.e3mall.sso.service.LoginService&methods=login&pid=7264&side=provider&timeout=600000&timestamp=1513685081181 empty://192.168.78.1/cn.e3mall.sso.service.LoginService?application=e3-sso-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.sso.service.LoginService&methods=login&pid=7269&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513685121397 empty://192.168.78.1/cn.e3mall.sso.service.LoginService?application=e3-sso-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.sso.service.LoginService&methods=login&pid=7269&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513685121397, cn.e3mall.cart.service.CartService=empty://10.254.9.63/cn.e3mall.cart.service.CartService?application=e3-order-web&category=providers&dubbo=2.5.3&interface=cn.e3mall.cart.service.CartService&methods=clear,getCartList,updateCartNum,mergerCart,addCart,deleteCart&pid=5455&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514014500895 empty://10.254.9.63/cn.e3mall.cart.service.CartService?application=e3-order-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.cart.service.CartService&methods=clear,getCartList,updateCartNum,mergerCart,addCart,deleteCart&pid=5455&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514014500895 empty://10.254.9.63/cn.e3mall.cart.service.CartService?application=e3-order-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.cart.service.CartService&methods=clear,getCartList,updateCartNum,mergerCart,addCart,deleteCart&pid=5455&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514014500895, cn.e3mall.service.ItemCatService=empty://192.168.78.1:20880/cn.e3mall.service.ItemCatService?anyhost=true&application=e3-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.service.ItemCatService&methods=getAllItemCat,getByParentNode&pid=7272&side=provider&timeout=600000&timestamp=1513685154736}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-23 21:52:26,688 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2017-12-23 21:52:31,761 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2017-12-23 21:52:31,762 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=localhost
+
+
+[INFO ] 2017-12-23 21:52:31,764 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.7.0_79
+
+
+[INFO ] 2017-12-23 21:52:31,765 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2017-12-23 21:52:31,765 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre
+
+
+[INFO ] 2017-12-23 21:52:31,766 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=/usr/local/maven/boot/plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2017-12-23 21:52:31,766 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=/Users/luowenxin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+
+
+[INFO ] 2017-12-23 21:52:31,766 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=/var/folders/5k/hrq4shs115l4btq3gk9h1yqh0000gn/T/
+
+
+[INFO ] 2017-12-23 21:52:31,767 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2017-12-23 21:52:31,769 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Mac OS X
+
+
+[INFO ] 2017-12-23 21:52:31,770 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=x86_64
+
+
+[INFO ] 2017-12-23 21:52:31,770 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.12.6
+
+
+[INFO ] 2017-12-23 21:52:31,771 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=luowenxin
+
+
+[INFO ] 2017-12-23 21:52:31,771 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=/Users/luowenxin
+
+
+[INFO ] 2017-12-23 21:52:31,771 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=/develop/Repository/e3-search-web
+
+
+[INFO ] 2017-12-23 21:52:31,773 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.78.134:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@44192ac2
+
+
+[INFO ] 2017-12-23 21:52:31,825 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:53:01,845 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 30029ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:53:01,847 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 30029ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:53:02,952 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:53:32,958 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31007ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:53:32,959 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31007ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:53:34,066 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:54:04,071 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31008ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:54:04,073 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31008ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:54:05,181 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:54:35,186 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31008ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:54:35,189 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31008ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:54:36,295 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:55:06,298 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31003ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:55:06,299 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31003ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:55:07,404 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:55:37,409 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31006ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:55:37,410 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31006ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:55:38,514 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:56:08,520 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31009ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:56:08,522 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31009ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:56:09,627 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:56:39,632 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31006ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:56:39,632 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31006ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:56:40,741 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:57:10,745 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31009ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:57:10,748 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31009ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:57:11,855 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:57:41,861 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31011ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:57:41,863 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31011ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:57:42,967 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:58:12,973 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31008ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:58:12,974 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31008ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:58:14,078 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:58:44,080 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31003ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:58:44,082 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31003ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:58:45,189 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:59:15,192 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31006ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:59:15,192 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31006ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:59:16,301 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 21:59:46,306 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31010ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 21:59:46,306 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31010ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 21:59:47,411 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-23 22:00:17,415 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 31008ms for sessionid 0x0
+
+
+[INFO ] 2017-12-23 22:00:17,416 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 31008ms for sessionid 0x0, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 22:00:18,521 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:18,524 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:18,597 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:19,758 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:19,759 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:19,759 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:20,869 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:20,869 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:20,870 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:21,977 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:21,977 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:21,978 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:23,086 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:23,087 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:23,088 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:24,198 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:24,199 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:24,200 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:25,308 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:25,309 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:25,309 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:26,416 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:26,417 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:26,417 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:27,526 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:27,526 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:27,527 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:28,635 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:28,637 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:28,640 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:29,760 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:29,761 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:29,761 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:30,869 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:30,870 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:30,870 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:31,978 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:31,978 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:31,979 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:33,083 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:33,085 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:33,087 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:34,204 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 22:00:34,206 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 22:00:34,206 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 22:00:35,308 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-23 22:00:39,244 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[INFO ] 2017-12-23 22:00:39,404 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.78.134/192.168.78.134:2181, sessionid = 0x160603cc2c80078, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-23 22:00:39,431 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-23 22:00:44,992 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:00:45,073 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:00:45,352 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[WARN ] 2017-12-23 22:00:48,077 method:org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'searchController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.search.service.SearchService cn.e3mall.search.controller.SearchController.searchService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'searchService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.search.service.SearchService. No provider available for the service cn.e3mall.search.service.SearchService from the url zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-search-web&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539 to the consumer 192.168.78.1 use dubbo version 2.5.3
+
+
+[ERROR] 2017-12-23 22:00:48,081 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:502)
+Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'searchController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.search.service.SearchService cn.e3mall.search.controller.SearchController.searchService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'searchService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.search.service.SearchService. No provider available for the service cn.e3mall.search.service.SearchService from the url zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-search-web&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539 to the consumer 192.168.78.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private cn.e3mall.search.service.SearchService cn.e3mall.search.controller.SearchController.searchService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'searchService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.search.service.SearchService. No provider available for the service cn.e3mall.search.service.SearchService from the url zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-search-web&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539 to the consumer 192.168.78.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 29 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'searchService': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.search.service.SearchService. No provider available for the service cn.e3mall.search.service.SearchService from the url zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-search-web&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539 to the consumer 192.168.78.1 use dubbo version 2.5.3
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:254)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 31 more
+Caused by: java.lang.IllegalStateException: Failed to check the status of the service cn.e3mall.search.service.SearchService. No provider available for the service cn.e3mall.search.service.SearchService from the url zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-search-web&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539 to the consumer 192.168.78.1 use dubbo version 2.5.3
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:420)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:300)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:138)
+	at com.alibaba.dubbo.config.spring.ReferenceBean.getObject(ReferenceBean.java:65)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168)
+	... 39 more
+
+
+[INFO ] 2017-12-23 22:04:35,111 method:com.alibaba.dubbo.config.AbstractConfig$1.run(AbstractConfig.java:450)
+ [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:04:35,115 method:com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(AbstractRegistryFactory.java:63)
+ [DUBBO] Close all registries [zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-search-web&dubbo=2.5.3&interface=com.alibaba.dubbo.registry.RegistryService&pid=1528&timestamp=1514037146594], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:04:35,116 method:com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:485)
+ [DUBBO] Destroy registry:zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-search-web&dubbo=2.5.3&interface=com.alibaba.dubbo.registry.RegistryService&pid=1528&timestamp=1514037146594, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:04:35,116 method:com.alibaba.dubbo.registry.support.AbstractRegistry.unregister(AbstractRegistry.java:312)
+ [DUBBO] Unregister: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:04:35,124 method:com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:494)
+ [DUBBO] Destroy unregister url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:04:35,124 method:com.alibaba.dubbo.registry.support.AbstractRegistry.unsubscribe(AbstractRegistry.java:343)
+ [DUBBO] Unsubscribe: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:04:35,125 method:com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:510)
+ [DUBBO] Destroy unsubscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1528&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514037141539, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:04:35,128 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:82)
+Terminate ZkClient event thread.
+
+
+[INFO ] 2017-12-23 22:04:35,131 method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)
+Session: 0x160603cc2c80078 closed
+
+
+[INFO ] 2017-12-23 22:04:35,134 method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:519)
+EventThread shut down for session: 0x160603cc2c80078
+
+
+[INFO ] 2017-12-23 22:22:14,835 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'e3-search-web': initialization started
+
+
+[INFO ] 2017-12-23 22:22:14,876 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'e3-search-web-servlet': startup date [Sat Dec 23 22:22:14 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-23 22:22:14,944 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2017-12-23 22:22:15,451 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2017-12-23 22:22:15,732 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.conf]
+
+
+[INFO ] 2017-12-23 22:22:15,744 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-12-23 22:22:21,618 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file /Users/luowenxin/.dubbo/dubbo-registry-192.168.78.134.cache, data: {cn.e3mall.sso.service.TokenService=dubbo://192.168.78.1:20883/cn.e3mall.sso.service.TokenService?anyhost=true&application=e3-sso&dubbo=2.5.3&interface=cn.e3mall.sso.service.TokenService&methods=getUserByToken&pid=1943&side=provider&timeout=600000&timestamp=1514038788719 empty://192.168.78.1/cn.e3mall.sso.service.TokenService?application=e3-order-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.sso.service.TokenService&methods=getUserByToken&pid=1950&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038864119 empty://192.168.78.1/cn.e3mall.sso.service.TokenService?application=e3-order-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.sso.service.TokenService&methods=getUserByToken&pid=1950&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038864119, cn.e3mall.service.ItemService=dubbo://192.168.78.1:20880/cn.e3mall.service.ItemService?anyhost=true&application=e3-manager&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=getItemList,getItemDescById,addItem,getItemById&pid=1859&side=provider&timeout=600000&timestamp=1514037985120 empty://192.168.78.1/cn.e3mall.service.ItemService?application=e3-item-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=getItemList,getItemDescById,addItem,getItemById&pid=1939&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038733206 empty://192.168.78.1/cn.e3mall.service.ItemService?application=e3-item-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=getItemList,getItemDescById,addItem,getItemById&pid=1939&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038733206, cn.e3mall.order.service.OrderService=dubbo://192.168.78.1:20885/cn.e3mall.order.service.OrderService?anyhost=true&application=e3-order&dubbo=2.5.3&interface=cn.e3mall.order.service.OrderService&methods=create&pid=1948&side=provider&timeout=600000&timestamp=1514038845244 empty://192.168.78.1/cn.e3mall.order.service.OrderService?application=e3-order-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.order.service.OrderService&methods=create&pid=1950&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038848199 empty://192.168.78.1/cn.e3mall.order.service.OrderService?application=e3-order-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.order.service.OrderService&methods=create&pid=1950&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038848199, cn.e3mall.sso.service.RegisterService=empty://192.168.78.1:20883/cn.e3mall.sso.service.RegisterService?anyhost=true&application=e3-sso&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.sso.service.RegisterService&methods=register,checkData&pid=1943&side=provider&timeout=600000&timestamp=1514038773135, cn.e3mall.search.service.SearchItemService=empty://192.168.78.1:20882/cn.e3mall.search.service.SearchItemService?anyhost=true&application=e3-search&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchItemService&methods=importAllItems&pid=936&side=provider&timeout=600000&timestamp=1513590923504, cn.e3mall.content.service.ContentService=dubbo://192.168.78.1:20881/cn.e3mall.content.service.ContentService?anyhost=true&application=e3-content&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentService&methods=addContent,findContentListByCid&pid=1882&side=provider&timeout=600000&timestamp=1514038170584 empty://192.168.78.1/cn.e3mall.content.service.ContentService?application=e3-portal-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentService&methods=addContent,findContentListByCid&pid=1877&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038181017 empty://192.168.78.1/cn.e3mall.content.service.ContentService?application=e3-portal-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentService&methods=addContent,findContentListByCid&pid=1877&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038181017, cn.e3mall.search.service.SearchService=dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1564&side=provider&timeout=600000&timestamp=1513598267507 empty://10.254.6.155/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1576&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513598257782 empty://10.254.6.155/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=1576&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513598257782, cn.e3mall.content.service.ContentCategoryService=empty://192.168.78.1:20881/cn.e3mall.content.service.ContentCategoryService?anyhost=true&application=e3-content&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.content.service.ContentCategoryService&methods=updateContentCategory,getContentCatList,addContentCategory&pid=1566&side=provider&timeout=600000&timestamp=1513598256338, cn.e3mall.sso.service.LoginService=empty://192.168.78.1:20883/cn.e3mall.sso.service.LoginService?anyhost=true&application=e3-sso&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.sso.service.LoginService&methods=login&pid=1943&side=provider&timeout=600000&timestamp=1514038783654, cn.e3mall.cart.service.CartService=dubbo://192.168.78.1:20884/cn.e3mall.cart.service.CartService?anyhost=true&application=e3-cart&dubbo=2.5.3&interface=cn.e3mall.cart.service.CartService&methods=clear,updateCartNum,getCartList,mergerCart,addCart,deleteCart&pid=1900&side=provider&timeout=600000&timestamp=1514038238055 empty://192.168.78.1/cn.e3mall.cart.service.CartService?application=e3-order-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.cart.service.CartService&methods=clear,getCartList,updateCartNum,mergerCart,addCart,deleteCart&pid=1950&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038863790 empty://192.168.78.1/cn.e3mall.cart.service.CartService?application=e3-order-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.cart.service.CartService&methods=clear,getCartList,updateCartNum,mergerCart,addCart,deleteCart&pid=1950&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038863790, cn.e3mall.service.ItemCatService=empty://192.168.78.1:20880/cn.e3mall.service.ItemCatService?anyhost=true&application=e3-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.service.ItemCatService&methods=getAllItemCat,getByParentNode&pid=1859&side=provider&timeout=600000&timestamp=1514037995625}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-23 22:22:21,662 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2017-12-23 22:22:26,686 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2017-12-23 22:22:26,687 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=localhost
+
+
+[INFO ] 2017-12-23 22:22:26,687 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.7.0_79
+
+
+[INFO ] 2017-12-23 22:22:26,688 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2017-12-23 22:22:26,688 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre
+
+
+[INFO ] 2017-12-23 22:22:26,688 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=/usr/local/maven/boot/plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2017-12-23 22:22:26,689 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=/Users/luowenxin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+
+
+[INFO ] 2017-12-23 22:22:26,689 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=/var/folders/5k/hrq4shs115l4btq3gk9h1yqh0000gn/T/
+
+
+[INFO ] 2017-12-23 22:22:26,690 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2017-12-23 22:22:26,691 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Mac OS X
+
+
+[INFO ] 2017-12-23 22:22:26,691 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=x86_64
+
+
+[INFO ] 2017-12-23 22:22:26,691 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.12.6
+
+
+[INFO ] 2017-12-23 22:22:26,692 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=luowenxin
+
+
+[INFO ] 2017-12-23 22:22:26,692 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=/Users/luowenxin
+
+
+[INFO ] 2017-12-23 22:22:26,693 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=/develop/Repository/e3-search-web
+
+
+[INFO ] 2017-12-23 22:22:26,694 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.78.134:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@267f4377
+
+
+[INFO ] 2017-12-23 22:22:26,719 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-23 22:22:26,730 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[INFO ] 2017-12-23 22:22:26,738 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.78.134/192.168.78.134:2181, sessionid = 0x160603cc2c8008e, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-23 22:22:26,740 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-23 22:22:31,911 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:22:31,935 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:22:31,983 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, urls: [dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2009&side=provider&timeout=600000&timestamp=1514038946766, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:22:32,235 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.78.1:20882 from NettyClient 192.168.78.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x0466aaf2, /192.168.78.1:51721 => /192.168.78.1:20882]], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:22:32,236 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient /192.168.78.1 connect to the server /192.168.78.1:20882, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:22:32,332 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service cn.e3mall.search.service.SearchService from url zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=e3-search-web&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timeout=600000&timestamp=1514038936504, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 22:22:32,608 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String cn.e3mall.search.controller.SearchController.search(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2017-12-23 22:22:33,109 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'e3-search-web-servlet': startup date [Sat Dec 23 22:22:14 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-23 22:22:33,193 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'e3-search-web-servlet': startup date [Sat Dec 23 22:22:14 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-23 22:22:33,272 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+
+
+[INFO ] 2017-12-23 22:22:33,386 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'e3-search-web': initialization completed in 18544 ms
+
+
+[WARN ] 2017-12-23 23:54:24,067 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 20000ms for sessionid 0x160603cc2c8008e
+
+
+[INFO ] 2017-12-23 23:54:24,082 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 20000ms for sessionid 0x160603cc2c8008e, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-23 23:54:24,190 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Disconnected)
+
+
+[INFO ] 2017-12-23 23:54:25,202 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 23:54:25,203 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 23:54:25,214 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8008e for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 23:54:26,603 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 23:54:26,603 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 23:54:26,603 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8008e for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 23:54:28,627 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 23:54:28,627 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 23:54:28,627 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8008e for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 23:54:30,472 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 23:54:30,473 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 23:54:30,473 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8008e for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 23:54:32,231 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 23:54:32,232 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 23:54:32,232 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8008e for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 23:54:33,458 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 23:54:33,459 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 23:54:33,459 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8008e for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 23:54:34,603 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-23 23:54:34,604 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-23 23:54:34,604 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8008e for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-23 23:54:36,479 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-23 23:54:36,481 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[WARN ] 2017-12-23 23:54:36,487 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1285)
+Unable to reconnect to ZooKeeper service, session 0x160603cc2c8008e has expired
+
+
+[INFO ] 2017-12-23 23:54:36,487 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Expired)
+
+
+[INFO ] 2017-12-23 23:54:36,487 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1154)
+Unable to reconnect to ZooKeeper service, session 0x160603cc2c8008e has expired, closing socket connection
+
+
+[INFO ] 2017-12-23 23:54:36,488 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.78.134:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@267f4377
+
+
+[INFO ] 2017-12-23 23:54:36,492 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-23 23:54:36,497 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[INFO ] 2017-12-23 23:54:36,497 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:282)
+ [DUBBO] Recover register url [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 23:54:36,499 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:292)
+ [DUBBO] Recover subscribe url [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 23:54:36,502 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.78.134/192.168.78.134:2181, sessionid = 0x160603cc2c8009a, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-23 23:54:36,502 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-23 23:54:36,504 method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:519)
+EventThread shut down for session: 0x160603cc2c8008e
+
+
+[INFO ] 2017-12-23 23:54:36,505 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, urls: [dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2009&side=provider&timeout=600000&timestamp=1514038946766], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 23:54:36,509 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 23:54:36,512 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 23:54:40,600 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:309)
+ [DUBBO] Retry register [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 23:54:40,612 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:354)
+ [DUBBO] Retry subscribe {consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504=[com.alibaba.dubbo.registry.integration.RegistryDirectory@1d6da5b1]}, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-23 23:54:40,633 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, urls: [dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2009&side=provider&timeout=600000&timestamp=1514038946766, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[WARN ] 2017-12-24 00:44:32,493 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 20003ms for sessionid 0x160603cc2c8009a
+
+
+[INFO ] 2017-12-24 00:44:32,563 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 20003ms for sessionid 0x160603cc2c8009a, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-24 00:44:32,673 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Disconnected)
+
+
+[INFO ] 2017-12-24 00:44:34,622 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-24 00:44:34,624 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-24 00:44:34,656 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8009a for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-24 00:44:36,122 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-24 00:44:36,122 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-24 00:44:36,123 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8009a for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-24 00:44:37,631 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-24 00:44:37,632 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-24 00:44:37,632 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8009a for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-24 00:44:39,727 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-24 00:44:39,728 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-24 00:44:39,736 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8009a for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-24 00:44:41,245 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-24 00:44:41,246 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-24 00:44:41,246 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8009a for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-24 00:44:42,445 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-24 00:44:42,446 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-24 00:44:42,446 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8009a for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-24 00:44:44,247 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[ERROR] 2017-12-24 00:44:44,248 method:org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:289)
+Unable to open socket to 192.168.78.134/192.168.78.134:2181
+
+
+[WARN ] 2017-12-24 00:44:44,248 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x160603cc2c8009a for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1024)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1060)
+
+
+[INFO ] 2017-12-24 00:44:45,710 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-24 00:44:45,712 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[WARN ] 2017-12-24 00:44:45,715 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1285)
+Unable to reconnect to ZooKeeper service, session 0x160603cc2c8009a has expired
+
+
+[INFO ] 2017-12-24 00:44:45,715 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Expired)
+
+
+[INFO ] 2017-12-24 00:44:45,715 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1154)
+Unable to reconnect to ZooKeeper service, session 0x160603cc2c8009a has expired, closing socket connection
+
+
+[INFO ] 2017-12-24 00:44:45,716 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.78.134:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@267f4377
+
+
+[INFO ] 2017-12-24 00:44:45,721 method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:519)
+EventThread shut down for session: 0x160603cc2c8009a
+
+
+[INFO ] 2017-12-24 00:44:45,722 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.78.134/192.168.78.134:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-24 00:44:45,721 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:282)
+ [DUBBO] Recover register url [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 00:44:45,803 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:292)
+ [DUBBO] Recover subscribe url [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 00:44:45,806 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.78.134/192.168.78.134:2181, initiating session
+
+
+[INFO ] 2017-12-24 00:44:45,808 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.78.134/192.168.78.134:2181, sessionid = 0x160603cc2c800a2, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-24 00:44:45,809 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-24 00:44:45,813 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, urls: [dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2009&side=provider&timeout=600000&timestamp=1514038946766], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 00:44:45,817 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 00:44:45,820 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 00:44:48,350 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:309)
+ [DUBBO] Retry register [consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 00:44:48,395 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:354)
+ [DUBBO] Retry subscribe {consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504=[com.alibaba.dubbo.registry.integration.RegistryDirectory@1d6da5b1]}, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 00:44:48,415 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, urls: [dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2009&side=provider&timeout=600000&timestamp=1514038946766, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=configurators&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:17,580 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.78.1:20882,url:dubbo://192.168.78.1:20882/cn.e3mall.search.service.SearchService?anyhost=true&application=e3-search-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timeout=600000&timestamp=1514038936504, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:17,582 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, urls: [empty://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:20,510 method:com.alibaba.dubbo.config.AbstractConfig$1.run(AbstractConfig.java:450)
+ [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:20,521 method:com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(AbstractRegistryFactory.java:63)
+ [DUBBO] Close all registries [zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-search-web&dubbo=2.5.3&interface=com.alibaba.dubbo.registry.RegistryService&pid=2031&timestamp=1514038941566], dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:20,523 method:com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:485)
+ [DUBBO] Destroy registry:zookeeper://192.168.78.134:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-search-web&dubbo=2.5.3&interface=com.alibaba.dubbo.registry.RegistryService&pid=2031&timestamp=1514038941566, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:20,528 method:com.alibaba.dubbo.registry.support.AbstractRegistry.unregister(AbstractRegistry.java:312)
+ [DUBBO] Unregister: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:20,546 method:com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:494)
+ [DUBBO] Destroy unregister url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:20,547 method:com.alibaba.dubbo.registry.support.AbstractRegistry.unsubscribe(AbstractRegistry.java:343)
+ [DUBBO] Unsubscribe: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:20,548 method:com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:510)
+ [DUBBO] Destroy unsubscribe url consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:20,550 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:82)
+Terminate ZkClient event thread.
+
+
+[INFO ] 2017-12-24 01:15:20,553 method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)
+Session: 0x160603cc2c800a2 closed
+
+
+[INFO ] 2017-12-24 01:15:20,553 method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:519)
+EventThread shut down for session: 0x160603cc2c800a2
+
+
+[INFO ] 2017-12-24 01:15:20,559 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.destroy(DubboProtocol.java:407)
+ [DUBBO] Close dubbo connect: 192.168.78.1:0-->192.168.78.1:20882, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:20,562 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.destroy(DubboProtocol.java:421)
+ [DUBBO] Close dubbo connect: 192.168.78.1:0-->192.168.78.1:20882, dubbo version: 2.5.3, current host: 192.168.78.1
+
+
+[INFO ] 2017-12-24 01:15:20,668 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:960)
+Closing WebApplicationContext for namespace 'e3-search-web-servlet': startup date [Sat Dec 23 22:22:14 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-24 01:15:20,734 method:com.alibaba.dubbo.registry.support.AbstractRegistry.unsubscribe(AbstractRegistry.java:343)
+ [DUBBO] Unsubscribe: consumer://192.168.78.1/cn.e3mall.search.service.SearchService?application=e3-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.e3mall.search.service.SearchService&methods=search&pid=2031&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1514038936504, dubbo version: 2.5.3, current host: 192.168.78.1

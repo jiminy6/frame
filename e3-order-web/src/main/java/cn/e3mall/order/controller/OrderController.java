@@ -38,8 +38,7 @@ public class OrderController {
 	@RequestMapping("/order/order-cart")
 	public String showOrderCart(HttpServletRequest request){
 		TbUser user = (TbUser) request.getAttribute("user");
-//		List<TbItem> cartList = cartService.getCartList(user.getId());
-		List<TbItem> cartList = cartService.getCartList(1L);
+		List<TbItem> cartList = cartService.getCartList(user.getId());
 		request.setAttribute("cartList",cartList);
 		return "order-cart";
 	}
@@ -55,17 +54,17 @@ public class OrderController {
 	 */
 	public String create(OrderInfo orderInfo,HttpServletRequest request){
 		TbUser user= (TbUser) request.getAttribute("user");
-		System.out.println(user);
 		TaotaoResult result=orderService.create(orderInfo);
 		//将用户信息封装到orderInfo中
 		orderInfo.setUserId(user.getId());
 		orderInfo.setBuyerNick(user.getUsername());
+		System.out.println(orderInfo);
 		//如果成功就清除购物车的信息
 		if(result.getStatus()==200){
 			cartService.clear(user.getId());
 		}
 		//把订单号传递给页面
-		request.setAttribute("orderId",orderInfo.getOrderId());
+		request.setAttribute("orderId",result.getData());
 		request.setAttribute("payment",orderInfo.getPayment());
 		//返回页面的逻辑视图
 		return "success";

@@ -107,15 +107,18 @@ public class CartController {
 		//如果列表不为空将cookie中商品列表和服务端的商品列表合并
 		//把cookie中的列表清空
 		TbUser user = (TbUser) request.getAttribute("user");
-		List<TbItem> cartListFromCookie = getCartListFromCookie(request);
+		System.out.println(user);
+		List<TbItem> list = getCartListFromCookie(request);
+		System.out.println(list);
 		if(user!=null){
-		cartService.mergerCart(user.getId(),cartListFromCookie);
+		cartService.mergerCart(user.getId(),list);
 		//删除cookie
 		CookieUtils.deleteCookie(request, response,"cart");
 		//从服务端取出商品列表
-		List<TbItem>list=cartService.getCartList(user.getId());
+		list=cartService.getCartList(user.getId());
+		System.out.println(list);
 		}
-		request.setAttribute("cartList",cartListFromCookie);
+		request.setAttribute("cartList",list);
 		return "cart";
 	}
 	/**
